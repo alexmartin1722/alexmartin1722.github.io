@@ -1,3 +1,5 @@
+// eslint-disable-next-line react/no-unescaped-entities
+
 import * as React from "react";
 import profile from "./static/profile.jpeg";
 import Image from "next/image";

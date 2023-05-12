@@ -4,14 +4,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/:any*",
-        destination: "/",
-      },
-    ];
-  },
+
   theme: {
     extend: {
       grayscale: {

@@ -13,7 +13,7 @@ export const avatar = profile;
 export const about = () => {
   return (
     <>
-      Hey, I'm Alex. I'm a&nbsp;
+      Hey, I am Alex. I am a&nbsp;
       <b>Undergraduate Researcher at the University of Rochester</b>
     </>
   );

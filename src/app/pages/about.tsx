@@ -19,12 +19,41 @@ export const about = () => {
 export const bio = () => {
   return (
     <>
-      I am third-year undergraduate student in computer science at the
-      University of Rochester advised by Jiebo Luo (link:
-      https://www.cs.rochester.edu/u/jluo/), Ehsan Hoque (https://hoques.com/),
-      Aaron White (http://aaronstevenwhite.io/), and Clyde Martin
-      (https://www.linkedin.com/in/clyde-f-martin-04726521/). My research
-      interests lie primarily in understanding both language and vision.
+      I am a third-year undergraduate student in computer science at the
+      University of Rochester advised by{" "}
+      <a
+        href="https://www.cs.rochester.edu/u/jluo/"
+        target="_blank"
+        className="font-bold underline underline-offset-2"
+      >
+        Jiebo Luo
+      </a>
+      ,&nbsp;
+      <a
+        href="https://hoques.com/"
+        target="_blank"
+        className="font-bold underline underline-offset-2"
+      >
+        Ehsan Hoque
+      </a>
+      ,&nbsp;
+      <a
+        href="http://aaronstevenwhite.io/"
+        target="_blank"
+        className="font-bold underline underline-offset-2"
+      >
+        Aaron White
+      </a>
+      , and&nbsp;
+      <a
+        href="https://www.linkedin.com/in/clyde-f-martin-04726521/"
+        target="_blank"
+        className="font-bold underline underline-offset-2"
+      >
+        Clyde Martin
+      </a>
+      . My research interests lie primarily in understanding both language and
+      vision.
     </>
   );
 };
@@ -187,7 +216,7 @@ function About() {
             <p className="max-w-[400px] text-neutral-800 dark:text-neutral-200">
               {about()}
             </p>
-            <p className="max-w-[400px] text-neutral-800 dark:text-neutral-200">
+            <p className="max-w-[400px] text-neutral-800 dark:text-neutral-200 mt-[10px]">
               {bio()}
             </p>
           </div>

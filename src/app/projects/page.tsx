@@ -50,7 +50,7 @@ export default function Projects() {
         <div className="flex flex-col items-center space-y-[8px]">
           <h1 className="font-semibold text-xl">Abstract</h1>
           <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-            Abstact goes here 
+            Abstact goes brrr 
           </p>
         </div>
       </section>
@@ -66,9 +66,6 @@ export default function Projects() {
           className="mt-[30px] flex flex-row space-x-[10px]"
         >
           <Image src="/skull2dog.png" height={300} width={300} alt="" />
-          <caption className="caption-bottom text-sm">
-            Example Image to Image Translations 
-          </caption>
           <Image src="/skull2dog.png" height={300} width={300} alt="" />
         </div>
       </section>

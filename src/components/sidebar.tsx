@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-// import { useRouter } from "next/navigation";
 // import { LayoutGroup, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -40,28 +39,23 @@ export default function NavBar() {
             )}`}
             href="/"
           >
-            {" "}
             About
           </Link>
-
-          <Link
-            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
-              "/publications"
-            )}`}
-            href="/publications"
-          >
-            {" "}
-            Publications
-          </Link>
-
           <Link
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/projects"
             )}`}
             href="/projects"
           >
-            {" "}
             Projects
+          </Link>
+          <Link
+            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
+              "/publications"
+            )}`}
+            href="/publications"
+          >
+            Publications
           </Link>
 
           <Link
@@ -70,7 +64,6 @@ export default function NavBar() {
             )}`}
             href="/cv"
           >
-            {" "}
             CV
           </Link>
         </div>

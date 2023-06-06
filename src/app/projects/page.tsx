@@ -13,7 +13,7 @@ export default function Projects() {
           className="flex flex-col items-center space-y-[8px] mt-[20px]"
         >
           <h1 className="font-semibold text-2xl"> Project name </h1>
-          <p className="font-semibold"> Chris Chen, Jiebo, Alex, ...</p>
+          <p className="font-semibold"> <a>Alexander Martin</a>, <a>Haitian Zheng</a>, <a>Jie An</a>, <a>Jiebo Luo</a></p>
           <p className="font-semibold"> University of Rochester</p>{" "}
         </div>
 
@@ -22,10 +22,10 @@ export default function Projects() {
           className="mt-[40px] flex flex-row space-x-[10px]"
         >
           <motion.div whileHover={{ scale: 1.3 }}>
-            <Image src="/handImage.jpg" height={300} width={300} alt="" />
+            <Image src="/dataset.png" height={300} width={300} alt="" />
           </motion.div>
           <motion.div whileHover={{ scale: 1.3 }}>
-            <Image src="/handImage.jpg" height={300} width={300} alt="" />
+            <Image src="/dataset.png" height={300} width={300} alt="" />
           </motion.div>
         </div>
 
@@ -39,7 +39,7 @@ export default function Projects() {
         </p>
 
         <Image
-          src="/dinoDummy.jpeg"
+          src="/skull2dog.png"
           height={300}
           width={300}
           alt=""
@@ -73,8 +73,8 @@ export default function Projects() {
           id="resultImageContainer"
           className="mt-[30px] flex flex-row space-x-[10px]"
         >
-          <Image src="/handImage.jpg" height={300} width={300} alt="" />
-          <Image src="/handImage.jpg" height={300} width={300} alt="" />
+          <Image src="/skull2dog.png" height={300} width={300} alt="" />
+          <Image src="/skull2dog.png" height={300} width={300} alt="" />
         </div>
       </section>
 

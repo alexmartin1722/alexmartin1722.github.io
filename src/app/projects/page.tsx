@@ -15,7 +15,7 @@ export default function Projects() {
           <h1 className="font-semibold text-2xl"> Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Image-to-Image Translation</h1>
           <p className="font-semibold"> <a>Alexander Martin</a>, <a>Haitian Zheng</a>, <a>Jie An</a>, <a>Jiebo Luo</a></p>
           <p className="font-semibold"> Department of Computer Science, University of Rochester</p>{" "}
-          <p className="font-semibold">Contact: amart50 [at] u [dot] rochester [dot] edu </p>
+          <p className="font-semibold">Contact: amart50@u.rochester.edu </p>
         </div>
 
         <div
@@ -31,8 +31,12 @@ export default function Projects() {
         </div>
 
         <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-          This is the official project page for paper name and the Skull2Animal dataset. Still under construction. 
-          For more information on the dataset or if you're looking for additional skull images, please contact the first author. 
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate
         </p>
 
         <Image

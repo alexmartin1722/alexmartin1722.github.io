@@ -47,7 +47,7 @@ export default function Projects() {
         />
       </section>
 
-      <hr className="border-2 my-[30px]" />
+      <hr className="border-[1px] my-[30px] mx-[25px]" />
 
       <section id="abstract" className="flex flex-col items-center">
         <div className="flex flex-col items-center space-y-[8px]">
@@ -63,7 +63,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <hr className="border-2 my-[30px]" />
+      <hr className="border-[1px] my-[30px] mx-[25px]" />
 
       <section id="results" className="flex flex-col items-center">
         <div className="flex flex-col items-center space-y-[8px]">
@@ -78,7 +78,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <hr className="border-2 my-[30px]" />
+      <hr className="border-[1px] my-[30px] mx-[25px]" />
 
       <section id="methods"> </section>
 

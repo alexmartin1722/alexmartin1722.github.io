@@ -31,8 +31,8 @@ export default function Projects() {
         </div>
 
         <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-          This is the official project page for "paper name" and the Skull2Animal dataset. This page is still under construction, but will be updated soon with more information.
-          For more information about additional skull images not published in the paper, please contact the first author. 
+          This is the official project page for paper name and the Skull2Animal dataset. Still under construction. 
+          For more information on the dataset or if you're looking for additional skull images, please contact the first author. 
         </p>
 
         <Image
@@ -50,7 +50,12 @@ export default function Projects() {
         <div className="flex flex-col items-center space-y-[8px]">
           <h1 className="font-semibold text-xl">Abstract</h1>
           <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-            Abstact goes brrr 
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate
           </p>
         </div>
       </section>

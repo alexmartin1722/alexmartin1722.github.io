@@ -12,9 +12,10 @@ export default function Projects() {
           id="titleContainer"
           className="flex flex-col items-center space-y-[8px] mt-[20px]"
         >
-          <h1 className="font-semibold text-2xl"> Project name </h1>
+          <h1 className="font-semibold text-2xl"> Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Image-to-Image Translation</h1>
           <p className="font-semibold"> <a>Alexander Martin</a>, <a>Haitian Zheng</a>, <a>Jie An</a>, <a>Jiebo Luo</a></p>
-          <p className="font-semibold"> University of Rochester</p>{" "}
+          <p className="font-semibold"> Department of Computer Science, University of Rochester</p>{" "}
+          <p className="font-semibold">Contact: amart50 [at] u [dot] rochester [dot] edu </p>
         </div>
 
         <div
@@ -30,12 +31,8 @@ export default function Projects() {
         </div>
 
         <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate
+          This is the official project page for "paper name" and the Skull2Animal dataset. This page is still under construction, but will be updated soon with more information.
+          For more information about additional skull images not published in the paper, please contact the first author. 
         </p>
 
         <Image
@@ -53,12 +50,7 @@ export default function Projects() {
         <div className="flex flex-col items-center space-y-[8px]">
           <h1 className="font-semibold text-xl">Abstract</h1>
           <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate
+            Abstact goes here 
           </p>
         </div>
       </section>
@@ -74,6 +66,9 @@ export default function Projects() {
           className="mt-[30px] flex flex-row space-x-[10px]"
         >
           <Image src="/skull2dog.png" height={300} width={300} alt="" />
+          <caption className="caption-bottom text-sm">
+            Example Image to Image Translations 
+          </caption>
           <Image src="/skull2dog.png" height={300} width={300} alt="" />
         </div>
       </section>

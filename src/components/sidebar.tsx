@@ -62,7 +62,8 @@ export default function NavBar() {
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/cv"
             )}`}
-            href="/cv"
+            href="CV.pdf"
+            target="_blank"
           >
             CV
           </Link>

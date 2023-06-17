@@ -47,7 +47,7 @@ export default function NavBar() {
             )}`}
             href="/projects"
           >
-            Projects
+            Project Pages
           </Link>
           <Link
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(

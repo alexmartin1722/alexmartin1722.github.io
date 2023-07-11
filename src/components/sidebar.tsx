@@ -41,14 +41,14 @@ export default function NavBar() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/projects"
             )}`}
             href="/projects"
           >
             Project Pages
-          </Link>
+          </Link> */}
           <Link
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/publications"

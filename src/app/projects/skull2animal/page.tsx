@@ -199,7 +199,7 @@ export default function Skull() {
         >
           <Image src="/alexEasterEgg.jpg" height={300} width={300} alt="" />
           <caption className="caption-bottom text-sm">
-            The author’s first ever Image-to-Image translation (It's a t-rex femur).
+            The author’s first ever Image-to-Image translation. It's a t-rex femur! 
           </caption>
         </section>
       </main>

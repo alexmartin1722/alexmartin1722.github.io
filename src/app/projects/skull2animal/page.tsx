@@ -18,9 +18,9 @@ export default function Skull() {
             id="titleContainer"
             className="flex flex-col items-center space-y-[8px] mt-[20px]"
           >
-            <h1 className="font-semibold text-2xl"> Project name </h1>
-            <p className="font-semibold"> Chris Chen, Jiebo, Alex, ...</p>
-            <p className="font-semibold"> University of Rochester</p>{" "}
+            <h1 className="font-semibold text-2xl">Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Long Image-to-Image Translation</h1>
+            <p className="font-semibold">Alexander Martin, Haitian Zheng, Jie An, Jiebo Luo</p>
+            <p className="font-semibold">University of Rochester, Department of Computer Science</p>{" "}
             <div id="links" className="flex flex-row text-lg space-x-[10px]">
               <Link
                 href=""
@@ -48,29 +48,24 @@ export default function Skull() {
             className="mt-[30px] flex flex-row space-x-[10px]"
           >
             <motion.div whileHover={{ scale: 1.3 }}>
-              <Image src="/handImage.jpg" height={300} width={300} alt="" />
+              <Image src="/fossil2dino_web.png" height={300} width={300} alt="" />
             </motion.div>
             {/* <motion.div whileHover={{ scale: 1.3 }}>
             <Image src="/handImage.jpg" height={300} width={300} alt="" />
           </motion.div> */}
           </div>
 
-          <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate
-          </p>
+          {/* <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
+            The official webpage for 
+          </p> */}
 
-          <Image
-            src="/dinoDummy.jpeg"
+          {/* <Image
+            src="/skull2animal_dataset_web.png"
             height={300}
             width={300}
             alt=""
             className=""
-          />
+          /> */}
         </section>
 
         <hr className="border-2 my-[30px]" />
@@ -79,15 +74,34 @@ export default function Skull() {
           <div className="flex flex-col items-center space-y-[8px]">
             <h1 className="font-semibold text-xl">Abstract</h1>
             <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate
+            With a strong understanding of the target domain from natural language, we produce promising results in translating across large domain gaps and bringing skeletons back to life. 
+            In this work, we use text-guided latent diffusion models for zero-shot image-to-image translation (I2I) across large domain gaps (longI2I), where large amounts of new visual features and new geometry need to be generated to enter the target domain. 
+            Being able to perform translations across large domain gaps has a wide variety of real-world applications in criminology, astrology, environmental conservation, and paleontology. 
+            In this work, we introduce a new task Skull2Animal for translating between skulls and living animals. On this task, we find that unguided Generative Adversarial Networks (GANs) are not capable of translating across large domain gaps. Instead of these traditional I2I methods, we explore the use of guided diffusion and image editing models and provide a new benchmark model, Revive-2I, capable of performing zero-shot I2I via text-prompting latent diffusion models. We find that guidance is necessary for longI2I because, to bridge the large domain gap, prior knowledge about the target domain is needed. In addition, we find that prompting provides the best and most scalable information about the target domain as classifier-guided diffusion models require retraining for specific use cases and lack stronger constraints on the target domain because of the wide variety of images they are trained on.
+
             </p>
           </div>
         </section>
+
+
+        <section id="abstract" className="flex flex-col items-center">
+          <div className="flex flex-col items-center space-y-[8px]">
+            <h1 className="font-semibold text-xl">Dataset</h1>
+            <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
+              The dataset consists of skulls and their corresponding living animals. 
+            </p>
+          </div>
+          <Image
+            src="/skull2animal_dataset_web.png"
+            height={300}
+            width={300}
+            alt=""
+            className=""
+          />
+        </section>
+
+
+        
 
         <hr className="border-2 my-[30px]" />
 
@@ -99,7 +113,7 @@ export default function Skull() {
             id="resultImageContainer"
             className="mt-[30px] flex flex-row space-x-[10px]"
           >
-            <Image src="/handImage.jpg" height={300} width={300} alt="" />
+            <Image src="/skull2dog_results_web.png" height={300} width={300} alt="" />
             {/* <Image src="/handImage.jpg" height={300} width={300} alt="" /> */}
           </div>
         </section>

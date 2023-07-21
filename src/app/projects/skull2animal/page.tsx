@@ -57,8 +57,8 @@ export default function Skull() {
             <motion.div whileHover={{ scale: 1.3 }}>
               <Image
                 src="/fossil2dino_web.png"
-                height={300}
-                width={300}
+                height={500}
+                width={500}
                 alt=""
               />
             </motion.div>
@@ -126,8 +126,8 @@ export default function Skull() {
           </div>
           <Image
             src="/skull2animal_dataset_web.png"
-            height={300}
-            width={300}
+            height={500}
+            width={500}
             alt=""
             className=""
           />
@@ -138,32 +138,20 @@ export default function Skull() {
         <section id="method" className="flex flex-col items-center">
           <div className="flex flex-col items-center space-y-[10px] mb-[20px]">
             <h1 className="font-semibold text-xl">Method</h1>
-            <p id="description" className="mt-[40px] mb-[40px] mx-[13px]">
-              The dataset consists of skulls and their corresponding living
-              animals.
-            </p>
-
+            <Image
+              src="/method_web.png"
+              height={500}
+              width={500}
+              alt=""
+              className=""
+            />
             <p id="description" className=" mx-[13px]">
-              ge domain gaps. Instead of these traditional I2I methods, we
-              explore the use of guided diffusion and image editing models and
-              provide a new benchmark model, Revive-2I, capable of performing
-              zero-shot I2I via text-prompting latent diffusion models. We find
-              that guidance is necessary for longI2I because, to bridge the
-              large domain gap, prior knowledge about the target domain is
-              needed. In addition, we find that prompting provides the best and
-              most scalable information about the target domain as
-              classifier-guided diffusion models require retraining for specific
-              use cases and lack stronger constraints on the target domain
-              because of the wide variety of images they are trained on.
+              The method uses a text-guided latent diffusion model. The source image is noised through the forward process in partial steps. 
+              These partials help retain the structure of the source image while allowing for the generation of new features. 
+              Then the partially noised latent is combined with the text embedding to produce a new latent in the target domain, which is then denoised in the reverse process.
             </p>
           </div>
-          <Image
-            src="/skull2animal_dataset_web.png"
-            height={300}
-            width={300}
-            alt=""
-            className=""
-          />
+          
         </section>
 
         <hr className="border-2 my-[30px]" />
@@ -178,12 +166,27 @@ export default function Skull() {
           >
             <Image
               src="/skull2dog_results_web.png"
-              height={300}
-              width={300}
+              height={1000}
+              width={1000}
               alt=""
             />
             {/* <Image src="/handImage.jpg" height={300} width={300} alt="" /> */}
           </div>
+
+          <div
+            id="resultTableImageContainer"
+            className="mt-[30px] flex flex-row space-x-[10px]"
+          >
+            <Image
+              src="/results_tab_web.png"
+              height={500}
+              width={500}
+              alt=""
+            />
+            {/* <Image src="/handImage.jpg" height={300} width={300} alt="" /> */}
+          </div>
+
+          
         </section>
 
         <hr className="border-2 my-[30px]" />

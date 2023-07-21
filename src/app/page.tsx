@@ -31,8 +31,8 @@ const about = () => {
  const bio = () => {
   return (
     <>
-      I am a third-year undergraduate student in computer science at the
-      University of Rochester advised by&nbsp;
+      I am a third-year undergraduate student in computer science at
+      the University of Rochester advised by&nbsp;
       <a
         href="https://www.cs.rochester.edu/u/jluo/"
         target="_blank"

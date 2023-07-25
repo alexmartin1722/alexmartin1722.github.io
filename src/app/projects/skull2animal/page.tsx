@@ -36,7 +36,7 @@ export default function Skull() {
                 Paper
               </Link>
               <Link
-                href="#"
+                href="https://github.com/alexmartin1722/Revive-2I"
                 className="text-blue-500 underline underline-offset-2 italic hover:text-blue-800 dark:hover:text-blue-300"
               >
                 Code

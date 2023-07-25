@@ -23,20 +23,20 @@ export default function Skull() {
               Zero-Shot Long Image-to-Image Translation
             </h1>
             <p className="font-semibold">
-              Alexander Martin, Haitian Zheng, Jie An, Jiebo Luo
+              <a href="https://alexmartin1722.github.io/">Alexander Martin</a>, <a href="https://www.cs.rochester.edu/u/hzheng15/haitian_homepage/index.html">Haitian Zheng</a>, <a href="https://www.cs.rochester.edu/u/jan6/">Jie An</a>, <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>
             </p>
             <p className="font-semibold">
               University of Rochester, Department of Computer Science
             </p>{" "}
             <div id="links" className="flex flex-row text-lg space-x-[10px]">
               <Link
-                href=""
+                href="#"
                 className="text-blue-500 underline underline-offset-2 italic hover:text-blue-800 dark:hover:text-blue-300"
               >
                 Paper
               </Link>
               <Link
-                href=""
+                href="#"
                 className="text-blue-500 underline underline-offset-2 italic hover:text-blue-800 dark:hover:text-blue-300"
               >
                 Code

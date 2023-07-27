@@ -42,7 +42,7 @@ export default function Skull() {
                 Code
               </Link>
               <Link
-                href="https://drive.google.com/drive/folders/1feHrsMNokvXYao_8UkjuJRfaAgmj_FhQ?usp=sharing"
+                href="https://forms.gle/7fcQHBAtZa3toMPn8"
                 className="text-blue-500 underline underline-offset-2 italic hover:text-blue-800 dark:hover:text-blue-300"
               >
                 Dataset

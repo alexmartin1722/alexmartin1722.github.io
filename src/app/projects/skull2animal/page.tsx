@@ -3,9 +3,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import RootLayout from "@/app/layout";
 import Link from "next/link";
+import { CodeSection } from "react-code-section-lib";
 
 export default function Skull() {
   const handleOpen = () => {};
+
+  const latexCitation = `
+  
+  @inproceedings{
+  anonymous2023jurassic,
+  title={Jurassic World Remake: Bringing Ancient Fossils Back to Life via 
+  Zero-Shot Long Image-to-Image Translation},
+  author={Anonymous},
+  booktitle={31st ACM International Conference on Multimedia (ACM Multimedia) 
+  Brave New Ideas Track},
+  year={2023},
+  url={https://openreview.net/forum?id=xwVMFxYjrz}
+  }`;
 
   return (
     <>
@@ -146,12 +160,15 @@ export default function Skull() {
               className=""
             />
             <p id="description" className=" mx-[13px]">
-              The method uses a text-guided latent diffusion model. The source image is noised through the forward process in partial steps. 
-              These partials help retain the structure of the source image while allowing for the generation of new features. 
-              Then the partially noised latent is combined with the text embedding to produce a new latent in the target domain, which is then denoised in the reverse process.
+              The method uses a text-guided latent diffusion model. The source
+              image is noised through the forward process in partial steps.
+              These partials help retain the structure of the source image while
+              allowing for the generation of new features. Then the partially
+              noised latent is combined with the text embedding to produce a new
+              latent in the target domain, which is then denoised in the reverse
+              process.
             </p>
           </div>
-          
         </section>
 
         <hr className="border-2 my-[30px]" />
@@ -177,16 +194,18 @@ export default function Skull() {
             id="resultTableImageContainer"
             className="mt-[30px] flex flex-row space-x-[10px]"
           >
-            <Image
-              src="/results_tab_web.png"
-              height={500}
-              width={500}
-              alt=""
-            />
+            <Image src="/results_tab_web.png" height={500} width={500} alt="" />
             {/* <Image src="/handImage.jpg" height={300} width={300} alt="" /> */}
           </div>
+        </section>
 
-          
+        <hr className="border-2 my-[30px]" />
+
+        <section id="citation" className="flex flex-col items-center">
+          <h1 className="font-semibold text-xl">Citation</h1>
+          <CodeSection theme="dark" lang="">
+            {latexCitation}
+          </CodeSection>
         </section>
 
         <hr className="border-2 my-[30px]" />
@@ -199,7 +218,8 @@ export default function Skull() {
         >
           <Image src="/alexEasterEgg.jpg" height={300} width={300} alt="" />
           <caption className="caption-bottom text-sm">
-            The author&#39;s first ever Image-to-Image translation. It&#39;s a t-rex femur! 
+            The author&#39;s first ever Image-to-Image translation. It&#39;s a
+            t-rex femur!
           </caption>
         </section>
       </main>

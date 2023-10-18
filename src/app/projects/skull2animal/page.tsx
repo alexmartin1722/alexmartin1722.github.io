@@ -22,10 +22,8 @@ export default function Skull() {
   }`;
 
   return (
-    <>
-      <RootLayout showNavBar={false}>
-        {/* Your page content goes here */}
-      </RootLayout>
+    <RootLayout showNavBar={false}>
+      {/* Your page content goes here */}
       <main className="flex min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0 border-[] border-slate-300 rounded-lg">
         <section id="projectIntro" className="flex flex-col items-center">
           <div
@@ -37,7 +35,12 @@ export default function Skull() {
               Zero-Shot Long Image-to-Image Translation
             </h1>
             <p className="font-semibold">
-              <a href="https://alexmartin1722.github.io/">Alexander Martin</a>, <a href="https://www.cs.rochester.edu/u/hzheng15/haitian_homepage/index.html">Haitian Zheng</a>, <a href="https://www.cs.rochester.edu/u/jan6/">Jie An</a>, <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>
+              <a href="https://alexmartin1722.github.io/">Alexander Martin</a>,{" "}
+              <a href="https://www.cs.rochester.edu/u/hzheng15/haitian_homepage/index.html">
+                Haitian Zheng
+              </a>
+              , <a href="https://www.cs.rochester.edu/u/jan6/">Jie An</a>,{" "}
+              <a href="https://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>
             </p>
             <p className="font-semibold">
               University of Rochester, Department of Computer Science
@@ -223,6 +226,6 @@ export default function Skull() {
           </caption>
         </section>
       </main>
-    </>
+    </RootLayout>
   );
 }

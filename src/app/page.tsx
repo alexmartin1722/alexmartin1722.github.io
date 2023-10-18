@@ -28,11 +28,11 @@ const about = () => {
     </>
   );
 };
- const bio = () => {
+const bio = () => {
   return (
     <>
-      I am a third-year undergraduate student in computer science at
-      the University of Rochester advised by&nbsp;
+      I am a third-year undergraduate student in computer science at the
+      University of Rochester advised by&nbsp;
       <a
         href="https://www.cs.rochester.edu/u/jluo/"
         target="_blank"
@@ -84,7 +84,7 @@ const researchInterest = () => {
   );
 };
 
- const hobby = () => {
+const hobby = () => {
   return (
     <>
       Outside of research, I enjoy hiking, spending time with my dogs, and
@@ -93,7 +93,7 @@ const researchInterest = () => {
   );
 };
 
- function Email() {
+function Email() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ const researchInterest = () => {
   );
 }
 
- function GitHubIcon() {
+function GitHubIcon() {
   return (
     <svg
       width="27.5"
@@ -133,7 +133,7 @@ const researchInterest = () => {
   );
 }
 
- function GoogleScholarIcon() {
+function GoogleScholarIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ const researchInterest = () => {
   );
 }
 
- function LinkedInIcon() {
+function LinkedInIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -167,19 +167,21 @@ const researchInterest = () => {
 
 function TwitterIcon() {
   return (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="30" height="31" 
-      viewBox="0 0 25 22">
-        <path 
-          d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"
-          fill="currentColor"
-          />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="31"
+      viewBox="0 0 25 22"
+    >
+      <path
+        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"
+        fill="currentColor"
+      />
     </svg>
   );
 }
 
- function ORCIDIcon() {
+function ORCIDIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -227,17 +229,16 @@ function TwitterIcon() {
 
 function HomePage() {
   return (
-    <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0">
+    <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0 bo">
       <section>
         <h1 className="text-3xl font-serif">
           <b>Alexander Martin</b>
         </h1>
-        <div className="flex items-start md:items-center my-7 flex-col md:flex-row">
+        <div className="flex items-start md:items-center mt-7 flex-col md:flex-row">
           <div
-            className="flex items-start md:items-center mr-12 flex-row md:flex-col"
-            style={{
-              height: 300,
-            }}
+            id="aboutAndBio"
+            className="flex items-start md:items-center md:mr-12 flex-col border- md:h-[300px]"
+           
           >
             <p className="max-w-[400px] text-neutral-800 dark:text-neutral-200">
               {about()}
@@ -248,7 +249,8 @@ function HomePage() {
           </div>
 
           <div
-            className="flex items-start mt-5 md:items-center flex-col ml-1"
+            id="ImageAndLinks"
+            className="flex items-start mt-7 md:mt-[0px] md:items-center flex-col ml-1"
             style={{
               height: 300,
             }}
@@ -262,7 +264,7 @@ function HomePage() {
             />
 
             {/* <nav id ="PageLinks"> */}
-            <div className="flex flex-row text-neutral-500 dark:text-neutral-400">
+            <div className="flex flex-row text-neutral-500  dark:text-neutral-400 ml-[-11px] md:ml-[0px]">
               <a
                 className="transition-all hover:text-neutral-800 
                                         dark:hover:text-neutral-200 py-[5px] px-[4px] 

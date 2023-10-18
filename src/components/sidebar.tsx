@@ -34,7 +34,7 @@ export default function NavBar() {
       <nav className="flex overflow-hidden flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative">
         <div className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
           <Link
-            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
+            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 pl-[17px] pr-[10px] py-[5px] md:px-[10px] ${isActive(
               "/"
             )}`}
             href="/"

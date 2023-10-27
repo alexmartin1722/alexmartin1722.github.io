@@ -9,16 +9,22 @@ export default function Skull() {
   const handleOpen = () => {};
 
   const latexCitation = `
-  
-  @inproceedings{
-  anonymous2023jurassic,
-  title={Jurassic World Remake: Bringing Ancient Fossils Back to Life via 
-  Zero-Shot Long Image-to-Image Translation},
-  author={Anonymous},
-  booktitle={31st ACM International Conference on Multimedia (ACM Multimedia) 
-  Brave New Ideas Track},
-  year={2023},
-  url={https://openreview.net/forum?id=xwVMFxYjrz}
+  @inproceedings{10.1145/3581783.3612708,
+    author = {Martin, Alexander and Zheng, Haitian and An, Jie and Luo, Jiebo},
+    title = {Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Long Image-to-Image Translation},
+    year = {2023},
+    isbn = {9798400701085},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3581783.3612708},
+    doi = {10.1145/3581783.3612708},
+    abstract = {With a strong understanding of the target domain from natural language, we produce promising results in translating across large domain gaps and bringing skeletons back to life. In this work, we use text-guided latent diffusion models for zero-shot image-to-image translation (I2I) across large domain gaps (longI2I), where large amounts of new visual features and new geometry need to be generated to enter the target domain. Being able to perform translations across large domain gaps has a wide variety of real-world applications in criminology, astrology, environmental conservation, and paleontology. In this work, we introduce a new task Skull2Animal for translating between skulls and living animals. On this task, we find that unguided Generative Adversarial Networks (GANs) are not capable of translating across large domain gaps. Instead of these traditional I2I methods, we explore the use of guided diffusion and image editing models and provide a new benchmark model, Revive-2I, capable of performing zero-shot I2I via text-prompting latent diffusion models. We find that guidance is necessary for longI2I because, to bridge the large domain gap, prior knowledge about the target domain is needed. In addition, we find that prompting provides the best and most scalable information about the target domain as classifier-guided diffusion models require retraining for specific use cases and lack stronger constraints on the target domain because of the wide variety of images they are trained on.},
+    booktitle = {Proceedings of the 31st ACM International Conference on Multimedia},
+    pages = {9320–9328},
+    numpages = {9},
+    keywords = {stable diffusion, large domain gap, image-to-image translation},
+    location = {Ottawa ON, Canada},
+    series = {MM '23}
   }`;
 
   return (

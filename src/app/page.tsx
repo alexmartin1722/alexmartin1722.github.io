@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ["latin"] });
 const about = () => {
   return (
     <>
-      Hey, I am Alex. I am a&nbsp;
+      Hey, I am Alex. I am an&nbsp;
       <b>Undergraduate Researcher at the University of Rochester</b>
     </>
   );
@@ -31,7 +31,7 @@ const about = () => {
 const bio = () => {
   return (
     <>
-      I am a third-year undergraduate student in computer science at the
+      I am a fourth-year undergraduate student in computer science at the
       University of Rochester advised by&nbsp;
       <a
         href="https://www.cs.rochester.edu/u/jluo/"
@@ -40,15 +40,7 @@ const bio = () => {
       >
         Jiebo Luo
       </a>
-      ,&nbsp;
-      <a
-        href="https://hoques.com/"
-        target="_blank"
-        className="font-bold underline underline-offset-2"
-      >
-        Ehsan Hoque
-      </a>
-      ,&nbsp;
+      and&nbsp;
       <a
         href="http://aaronstevenwhite.io/"
         target="_blank"
@@ -56,7 +48,16 @@ const bio = () => {
       >
         Aaron White
       </a>
-      , and&nbsp;
+      . I also had the opportunity to collaborate with
+      &nbsp;
+      <a
+        href="https://hoques.com/"
+        target="_blank"
+        className="font-bold underline underline-offset-2"
+      >
+        Ehsan Hoque
+      </a>
+      and&nbsp;
       <a
         href="https://www.linkedin.com/in/clyde-f-martin-04726521/"
         target="_blank"
@@ -65,7 +66,9 @@ const bio = () => {
         Clyde Martin
       </a>
       . My research interests lie primarily in understanding both language and
-      vision.
+      vision. I am currently looking to enroll in Ph.D. programs in Fall 2024.
+      I am hoping to work on creating and solving tasks for understanding large 
+      context singlemodal and multimodal content, like documents and videos. 
     </>
   );
 };

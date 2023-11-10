@@ -52,7 +52,7 @@ export default function Skull() {
             </p>{" "}
             <div id="links" className="flex flex-row text-lg space-x-[10px]">
               <Link
-                href="#"
+                href="https://dl.acm.org/doi/10.1145/3581783.3612708"
                 className="text-blue-500 underline underline-offset-2 italic hover:text-blue-800 dark:hover:text-blue-300"
               >
                 Paper

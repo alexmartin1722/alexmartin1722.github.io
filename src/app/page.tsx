@@ -40,7 +40,7 @@ const bio = () => {
       >
         Jiebo Luo
       </a>
-      and&nbsp;
+      &nbsp;and&nbsp;
       <a
         href="http://aaronstevenwhite.io/"
         target="_blank"
@@ -48,8 +48,7 @@ const bio = () => {
       >
         Aaron White
       </a>
-      . I also had the opportunity to collaborate with
-      &nbsp;
+      . I also had the opportunity to collaborate with&nbsp;
       <a
         href="https://hoques.com/"
         target="_blank"
@@ -57,7 +56,7 @@ const bio = () => {
       >
         Ehsan Hoque
       </a>
-      and&nbsp;
+      &nbsp;and&nbsp;
       <a
         href="https://www.linkedin.com/in/clyde-f-martin-04726521/"
         target="_blank"
@@ -66,9 +65,9 @@ const bio = () => {
         Clyde Martin
       </a>
       . My research interests lie primarily in understanding both language and
-      vision. I am currently looking to enroll in Ph.D. programs in Fall 2024.
-      I am hoping to work on creating and solving tasks for understanding large 
-      context singlemodal and multimodal content, like documents and videos. 
+      vision. I am currently looking to enroll in Ph.D. programs in Fall 2024. I
+      am hoping to work on creating and solving tasks for understanding large
+      context singlemodal and multimodal content, like documents and videos.
     </>
   );
 };

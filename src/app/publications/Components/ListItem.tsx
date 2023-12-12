@@ -1,14 +1,20 @@
 import ReadMoreComponent from "@/components/readmore";
 interface ListItemProps {
-  item: {
-    // Define the properties and their types in your dictionary
-    date: string;
-    title: string;
-    conference: string;
-    description: string;
-    url: string;
-    // ... add more properties as needed
-  };
+  item:
+    | {
+        date: string;
+        title: string;
+        url: string;
+        conference: string;
+        description: string;
+      }
+    | {
+        date: string;
+        title: string;
+        conference: string;
+        description: string;
+        url?: undefined;
+      };
 }
 
 const ListItem: React.FC<ListItemProps> = ({ item }) => {

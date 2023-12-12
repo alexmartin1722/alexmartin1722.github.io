@@ -2,7 +2,7 @@ export const publication_list = [
   {
     date: "December 2023",
     title: "Event-Keyed Summarization",
-    url: "https://www.google.com/",
+    url: "https://scholar.google.com/citations?hl=en&user=6_4ethMAAAAJ",
     conference: "NAACL",
     description:
       "We introduce event-keyed summarization, a novel summarization task that marries traditional summarization and document-level event extraction (EE), with the goal of generating a contextualized, abstractive summary for a specific event described in a document, given the document text and an event structure extracted from the document. We introduce a dataset for this task, MUCSUM, consisting of summaries of all annotated events in the classic MUC dataset. We present a series of baselines on the task, comprising both standard pretrained LMs common in the summarization literature (BART, PEGASUS, T5), as well as larger frontier models (ChatGPT, GPT-4). Additionally, we present ablations to show that alternative task formulations yield inferior summaries of the target events. Finally, we present a human evaluation of reference and model outputs, as well as an evaluation that draws on standard metrics in document-level EE but that is novel in a summarization context.",

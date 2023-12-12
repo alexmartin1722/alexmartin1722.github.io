@@ -1,38 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+It seems that my website is down. Please email me at amart50@u.rochester.edu if you stumble upon this landing page. 
 
-## Getting Started
+## About Me
+I am a fourth-year undergraduate student in computer science at the University of Rochester advised by Jiebo Luoand Aaron White. I also had the opportunity to collaborate with  Ehsan Hoqueand Clyde Martin. My research interests lie primarily in understanding both language and vision. I am currently looking to enroll in Ph.D. programs in Fall 2024. I am hoping to work on creating and solving tasks for understanding large context singlemodal and multimodal content, like documents and videos.
 
-First, run the development server:
+## Publications
+### Accepted and Under Review Papers:
+- A. Martin, H. Zheng, J. An, J. Luo “Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Long Image-to-Image Translation” (Accepted, ACM MM)
+- S. Vashishtha, A. Martin, W. Gantt, B. Van Durme, A.S. White “FAMuS: Frames Across Multiple
+Sources” (Submitted NAACL, Preprint, ArXiv, Hugging Face)
+- W. Gantt, A. Martin, P. Kuchmiichuk, A.S. White "Event-Keyed Summarization" (Submitted NAACL)
+- S. Barham, O. Weller, et al. (incl. A. Martin) “MegaWika: Millions of reports and their sources
+across 50 diverse languages” (Submitted, ACL ARR; Preprint, ArXiv, Hugging Face)
+- A. Kirk, A. DeStafano, A. Martin, K. Kirk, C. Martin “A New Interpretation of Relative
+Importance on An Analysis of Per and Polyfluorinated Alkyl Substances (PFAS) Exposures on
+Bone Mineral Density” (Published, IJERPH)
+- A. Martin, C. Martin “Probabilities Associated with a Dynamic Game”
+(Under Revision, Communications in Information Systems)
+- C. Martin, A. Martin, A. Kirk “Regression on subspaces: A tool for mixtures with applications to
+the effects of per-and polyfluoroalkyl substances on risk of major osteoporotic fracture”
+(Under Revision, Journal of Agricultural Biological and Environment Statistics)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Presentations
+- ACM Multimedia 2023, Jurassic World Remake (October 2023)
+- University of Rochester Data Set Grant Presentations: Document Level Event Information and
+Relations (September 2023)
+- University of Rochester Research Symposium: Hi5: Hand Pose Estimation with Zero Human
+Annotation (April 2023)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### In work
+- A. Martin, A.S. White “Context Minimization for Cross-Document Argument Extraction” (Intended ACL 2024)
+- A. Martin, W. Gantt, A.S. White “Event-Queried Summarization”
+(Intended NAACL 2024)
+- M. Hasan, C. Ozel, A. Martin, S. Potter, T. Adnan, E. Hoque “Hi5: Hand Pose Estimation with
+Zero Human Annotation” (Intended FAaccT 2024)
+- A. Martin*, J. An*, J. Luo “Closed-Loop Corrections for Text-to-Image Generation” (Intended
+ECCV/ICLR 2024)
+- A. Imtiaz, C. Nair, O. Hai, A. Martin, A.S. White “Connotate: A Concrete Annotator Tool”
+(Intended ACL Short 2024)
+- A. Martin, H. Lyu, J. Lin, H. Hua, A.S. White, J. Luo “Multimodal Report Generation” (MM or ICCV 2024)
+- A. Martin*, Y. Zang*, D. Zhang, G. Zhu, Y. Zhang, Z. Duan, J. Luo “Unsupervised Rhythm and
+Emotion Aware Background Music Generation” (2024)
+- A. Martin, J. Huang, J. Lin, A.S. White, J. Luo “Learning Eventuality Structure From Videos”
+(2024)
+- A. Martin “Beyond Document Level Information Extraction” (Senior Thesis 2024)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

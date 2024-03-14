@@ -64,10 +64,47 @@ const bio = () => {
       >
         Clyde Martin
       </a>
+      
       . My research interests lie primarily in understanding both language and
       vision. I am currently looking to enroll in Ph.D. programs in Fall 2024. I
       am hoping to work on creating and solving tasks for understanding large
       context singlemodal and multimodal content, like documents and videos.
+
+      <p className="mt-4"> My current active research projects are in </p>
+
+
+      <ol className="flex flex-col space-y-2">
+        <li> 
+          <a className=""> 
+            <b>1. </b> 
+             human centric information extraction, specifically in reframing template extraction as summarization (<a href="https://arxiv.org/abs/2402.06973" target="_blank" className="hover:text-font-bold transition underline">EKS</a>)
+
+          </a>
+        </li>
+
+        <li> 
+          <a className=""> 
+            <b>2. </b> 
+            citation-based information extraction (<a href="https://arxiv.org/abs/2307.07049" target="_blank" className="hover:text-font-bold transition underline">MegaWika</a>, <a href="https://arxiv.org/abs/2311.05601" target="_blank" className="hover:text-font-bold transition underline">FAMuS</a>)
+
+          </a>
+        </li>
+
+        <li> 
+          <a className=""> 
+            <b>3. </b> 
+            Cross-modal information extraction and summarization from videos (<a href="https://videoxum.github.io/" target="_blank" className="hover:text-font-bold transition underline">VideoXum</a>)
+
+          </a>
+        </li>
+        
+
+
+      </ol>
+   
+      
+     
+      
     </>
   );
 };
@@ -236,10 +273,10 @@ function HomePage() {
         <h1 className="text-3xl font-serif">
           <b>Alexander Martin</b>
         </h1>
-        <div className="flex items-start md:items-center mt-7 flex-col md:flex-row">
+        <div className="flex items-start md: mt-7 flex-col md:flex-row">
           <div
             id="aboutAndBio"
-            className="flex items-start md:items-center md:mr-12 flex-col border- md:h-[300px]"
+            className="flex items-start md:items-center md:mr-12 flex-col border-"
            
           >
             <p className="max-w-[400px] text-neutral-800 dark:text-neutral-200">
@@ -338,7 +375,6 @@ function HomePage() {
           </div>
         </div>
 
-        <hr />
       </section>
     </main>
   );

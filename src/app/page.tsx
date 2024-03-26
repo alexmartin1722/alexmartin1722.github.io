@@ -97,6 +97,13 @@ const bio = () => {
 
           </a>
         </li>
+
+        <li> 
+          <a className=""> 
+            <b>4. </b> 
+            Using computer vision to provide insights into anatomical structures at a broad taxonomic scale and even to extinct species (<a href="https://videoxum.github.io/" target="_blank" className="hover:text-font-bold transition underline">Jurassic World Remake</a>)
+          </a>
+        </li>
         
 
 

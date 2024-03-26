@@ -24,23 +24,25 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </Head>
+      <div className="flex flex-col w-full ">
       <body className="border- antialiased max-w-4xl mb- flex flex-col md:flex-row mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto">
         {showNavBar && <Sidebar />} {/* Conditionally render the NavBar */}
         <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0">
           {children}
           {/* <Analytics /> */}
         </main>
-        <footer
-          className="ml-2 mb-1 md:ml-0"
+       
+      </body>{" "}
+      <footer
+          className="ml-2 mb-1 md:ml-0 text-center pt-[20px]"
           style={{
             fontSize: "0.75rem",
-            position: "fixed",
             bottom: "0",
           }}
         >
-          <p> @ Copyright 2023 Alex Martin. Contact: amart50@u.rochester.edu</p>
+          <p> @ Copyright 2024 Alex Martin. Contact: amart50@u.rochester.edu</p>
         </footer>
-      </body>{" "}
+        </div>
     </html>
   );
 }

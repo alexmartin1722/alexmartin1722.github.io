@@ -1,6 +1,6 @@
 export const publication_list = [
   {
-    date: "February 2023",
+    date: "February 2024",
     title: "Event-Keyed Summarization",
     url: "https://arxiv.org/abs/2402.06973",
     conference: "ArXiv",

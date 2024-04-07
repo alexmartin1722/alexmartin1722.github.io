@@ -70,19 +70,19 @@ export default function NavBar() {
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/cv"
             )}`}
-            href="CV.pdf"
+            href="Resume.pdf"
             target="_blank"
           >
-            Short CV
+            Resume(4/7)
           </Link>
           <Link
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/cv"
             )}`}
-            href="Alexander_Martin_CV_Long.pdf"
+            href="CV.pdf"
             target="_blank"
           >
-            Long CV
+            CV(4/7)
           </Link>
         </div>
       </nav>

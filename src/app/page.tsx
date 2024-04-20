@@ -23,16 +23,43 @@ const inter = Inter({ subsets: ["latin"] });
 const about = () => {
   return (
     <>
-      Hey, I am Alex. I am an&nbsp;
-      <b>Undergraduate Researcher at the University of Rochester</b>
+      Hey, I am Alex. I am an incoming &nbsp;
+      <b>Ph.D. student at Johns Hopkins University</b>. I am supported by an NSF Graduate Research Fellowship.
     </>
   );
 };
 const bio = () => {
   return (
     <>
-      I am a fourth-year undergraduate student in computer science at the
-      University of Rochester advised by&nbsp;
+      My current research is in the intersection of vision and language. I am interested in understanding videos and documents, especially in large contexts,
+       and distilling knowledge from these large unstructured sources into concise representations.
+      <p className="mt-4"> 
+      I currently am working on projects in:
+      <ol className="flex flex-col space-y-2">
+        <li> 
+          <a className=""> 
+            <b>1. </b> 
+             automatic report generation and summarization for language (<a href="https://arxiv.org/abs/2402.06973" target="_blank" className="hover:text-font-bold transition underline">EKS</a>) and videos (<a href="https://videoxum.github.io/" target="_blank" className="hover:text-font-bold transition underline">VideoXum</a>)
+          </a>
+        </li>
+        <li> 
+          <a className=""> 
+            <b>2. </b> 
+             retrieval and event/argument extraction from videos (and aligned text) (<a href="https://hltcoe.jhu.edu/research/scale/scale-2024/" target="_blank" className="hover:text-font-bold transition underline">SCALE</a>)
+          </a>
+        </li>
+        <li> 
+          <a className=""> 
+            <b>3. </b> 
+             event retrieval and cross-document argument extraction (<a href="https://arxiv.org/abs/2307.07049" target="_blank" className="hover:text-font-bold transition underline">MegaWika</a>, <a href="https://arxiv.org/abs/2311.05601" target="_blank" className="hover:text-font-bold transition underline">FAMuS</a>)
+          </a>
+        </li>
+      </ol>
+      </p>
+
+      <p className="mt-4"> Previously in my undergraduate at the University of Rochester, 
+      I worked on projects in image generation, video summarization, and event extraction advised by
+      &nbsp;
       <a
         href="https://www.cs.rochester.edu/u/jluo/"
         target="_blank"
@@ -47,68 +74,17 @@ const bio = () => {
         className="font-bold underline underline-offset-2"
       >
         Aaron White
-      </a>
-      . I also had the opportunity to collaborate with&nbsp;
-      <a
-        href="https://hoques.com/"
-        target="_blank"
-        className="font-bold underline underline-offset-2"
-      >
-        Ehsan Hoque
-      </a>
-      &nbsp;and&nbsp;
+      </a>.
+
+      I also had the opportunity to do some research in mathematics (and still do) with &nbsp;
       <a
         href="https://www.linkedin.com/in/clyde-f-martin-04726521/"
         target="_blank"
         className="font-bold underline underline-offset-2"
       >
         Clyde Martin
-      </a>
-      
-      . My research interests lie primarily in understanding both language and
-      vision. I am currently looking to enroll in Ph.D. programs in Fall 2024. I
-      am hoping to work on creating and solving tasks for understanding large
-      context singlemodal and multimodal content, like documents and videos.
-
-      <p className="mt-4"> My current active research projects are in </p>
-
-
-      <ol className="flex flex-col space-y-2">
-        <li> 
-          <a className=""> 
-            <b>1. </b> 
-             human centric information extraction, specifically in reframing template extraction as summarization (<a href="https://arxiv.org/abs/2402.06973" target="_blank" className="hover:text-font-bold transition underline">EKS</a>)
-
-          </a>
-        </li>
-
-        <li> 
-          <a className=""> 
-            <b>2. </b> 
-            citation-based information extraction (<a href="https://arxiv.org/abs/2307.07049" target="_blank" className="hover:text-font-bold transition underline">MegaWika</a>, <a href="https://arxiv.org/abs/2311.05601" target="_blank" className="hover:text-font-bold transition underline">FAMuS</a>)
-
-          </a>
-        </li>
-
-        <li> 
-          <a className=""> 
-            <b>3. </b> 
-            Cross-modal information extraction and summarization from videos (<a href="https://videoxum.github.io/" target="_blank" className="hover:text-font-bold transition underline">VideoXum</a>)
-
-          </a>
-        </li>
-
-        <li> 
-          <a className=""> 
-            <b>4. </b> 
-            Using computer vision to provide insights into anatomical structures at a broad taxonomic scale and even to extinct species (<a href="https://alexmartin1722.github.io/projects/skull2animal" target="_blank" className="hover:text-font-bold transition underline">Jurassic World Remake</a>)
-          </a>
-        </li>
-      </ol>
-   
-      
-     
-      
+      </a>.
+      </p>
     </>
   );
 };

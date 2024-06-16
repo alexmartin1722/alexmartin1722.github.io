@@ -49,6 +49,27 @@ export default function NavBar() {
           >
             Project Pages
           </Link> */}
+
+          <Link
+            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
+              "/cv"
+            )}`}
+            href="CV.pdf"
+            target="_blank"
+          >
+            CV(6/16)
+          </Link>
+
+          <Link
+            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
+              "/cv"
+            )}`}
+            href="Resume.pdf"
+            target="_blank"
+          >
+            Resume(6/16)
+          </Link>
+
           <Link
             className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
               "/publications"
@@ -65,25 +86,7 @@ export default function NavBar() {
           >
             Talks
           </Link>
-
-          <Link
-            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
-              "/cv"
-            )}`}
-            href="Resume.pdf"
-            target="_blank"
-          >
-            Resume(4/7)
-          </Link>
-          <Link
-            className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] ${isActive(
-              "/cv"
-            )}`}
-            href="CV.pdf"
-            target="_blank"
-          >
-            CV(4/7)
-          </Link>
+          
         </div>
       </nav>
     </aside>

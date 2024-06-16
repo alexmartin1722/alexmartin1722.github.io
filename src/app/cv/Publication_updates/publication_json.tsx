@@ -3,7 +3,7 @@ export const publication_list = [
     date: "May 2024",
     title: "Regression on Subspaces: A Tool for Mixtures with Applications to the Effects of Per- and Polyfluoroalkyl Substances on Risk of Major Osteoporotic Fracture",
     url: "",
-    conference: "OJS",
+    conference: "Under Review",
     description:
       "The main goal of this paper is the development of a tool for studying the effects of a mixture of PFAS species on a major health vulnerability: risk of bone fracture. Classical regression is a tool for studying the effect of individual variables on a variable of interest. In our research pf the effects of PFAS on the human body we see that it is not the individual variables that are of interest but sets of variables. The main result of this paper is the extension of multi-linear regression from single variables to subspaces. In order to do this we use a set of tools that are widely used namely vector space methods. We present an example based on data from the US National Health and Nutrition Examinations Survey (NHANES) release cycle from 2013-2014 to calculate the effect of a mixture of per and polyfluorinated alkyl substances (PFAS) to risk of bone fracture. The tool developed in this paper is useful for those epidemiological studies in which it is impractical or difficult to determine the effects of a single variable within a mixture. The tool will be useful for those assessing risks to human or ecological health posed by chemical mixtures, including PFAS, on bone or any other health outcome.",
   },
@@ -11,7 +11,7 @@ export const publication_list = [
     date: "February 2024",
     title: "Event-Keyed Summarization",
     url: "https://arxiv.org/abs/2402.06973",
-    conference: "ArXiv",
+    conference: "ArXiv (submitted EMNLP)",
     description:
       "We introduce event-keyed summarization, a novel summarization task that marries traditional summarization and document-level event extraction (EE), with the goal of generating a contextualized, abstractive summary for a specific event described in a document, given the document text and an event structure extracted from the document. We introduce a dataset for this task, MUCSUM, consisting of summaries of all annotated events in the classic MUC dataset. We present a series of baselines on the task, comprising both standard pretrained LMs common in the summarization literature (BART, PEGASUS, T5), as well as larger frontier models (ChatGPT, GPT-4). Additionally, we present ablations to show that alternative task formulations yield inferior summaries of the target events. Finally, we present a human evaluation of reference and model outputs, as well as an evaluation that draws on standard metrics in document-level EE but that is novel in a summarization context.",
   },

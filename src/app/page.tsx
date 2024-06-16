@@ -23,8 +23,12 @@ const inter = Inter({ subsets: ["latin"] });
 const about = () => {
   return (
     <>
+      <p>
+      I will be at NAACL 2024 and am hoping to meet people! Reach out to me on email (amart233@jh.edu) or <a href="https://twitter.com/alexdmartin314" target="_blank" className="hover:text-font-bold transition underline">twitter</a>!
+      </p>
+      <p></p>
       Hey, I am Alex. I am an incoming &nbsp;
-      <b>Ph.D. student at Johns Hopkins University</b>. I am supported by an NSF Graduate Research Fellowship.
+      <b>Ph.D. student at Johns Hopkins University</b>. I am supported by an NSF Graduate Research Fellowship. 
     </>
   );
 };
@@ -32,26 +36,27 @@ const bio = () => {
   return (
     <>
       My current research is in the intersection of vision and language. I am interested in understanding videos and documents, especially in large contexts,
-       and distilling knowledge from these large unstructured sources into concise representations.
+       and distilling knowledge from these large unstructured sources into concise representations. My NSF GRF proposal is on understanding events
+       in videos and multimodal (video+language).
       <p className="mt-4"> 
       I currently am working on projects in:
       <ol className="flex flex-col space-y-2">
         <li> 
           <a className=""> 
             <b>1. </b> 
-             automatic report generation and summarization for language (<a href="https://arxiv.org/abs/2402.06973" target="_blank" className="hover:text-font-bold transition underline">EKS</a>) and videos (<a href="https://videoxum.github.io/" target="_blank" className="hover:text-font-bold transition underline">VideoXum</a>)
+             Automatic report generation and summarization for language (<a href="https://arxiv.org/abs/2402.06973" target="_blank" className="hover:text-font-bold transition underline">EKS</a>) and videos (<a href="https://videoxum.github.io/" target="_blank" className="hover:text-font-bold transition underline">VideoXum</a>)
           </a>
         </li>
         <li> 
           <a className=""> 
             <b>2. </b> 
-             retrieval and event/argument extraction from videos (and aligned text) (<a href="https://hltcoe.jhu.edu/research/scale/scale-2024/" target="_blank" className="hover:text-font-bold transition underline">SCALE</a>)
+             Information Extraction across multiple documents (<a href="https://arxiv.org/abs/2311.05601" target="_blank" className="hover:text-font-bold transition underline">FAMuS</a>) and multiple modalities (preprint coming soon). 
           </a>
         </li>
         <li> 
           <a className=""> 
             <b>3. </b> 
-             event retrieval and cross-document argument extraction (<a href="https://arxiv.org/abs/2307.07049" target="_blank" className="hover:text-font-bold transition underline">MegaWika</a>, <a href="https://arxiv.org/abs/2311.05601" target="_blank" className="hover:text-font-bold transition underline">FAMuS</a>)
+             Methods for strong video understanding (work in progress). With a specific interest in long videos and videos with multiple events.
           </a>
         </li>
       </ol>

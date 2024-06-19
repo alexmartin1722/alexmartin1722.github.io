@@ -337,7 +337,7 @@ function HomePage() {
                 className="transition-all hover:text-neutral-800 
                                         dark:hover:text-neutral-200 py-[2.6px] px-[3px] 
                                         text-neutral-500"
-                href="https://www.linkedin.com/in/alexander-david-paul-martin/"
+                href="https://www.linkedin.com/in/alexanderdpmartin/"
                 rel="external nofollow noopener"
                 target="_blank"
               >

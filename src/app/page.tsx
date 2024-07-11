@@ -23,10 +23,6 @@ const inter = Inter({ subsets: ["latin"] });
 const about = () => {
   return (
     <>
-      <p>
-      I will be at NAACL 2024 and am hoping to meet people! Reach out to me on email (amart233@jh.edu) or <a href="https://twitter.com/alexdmartin314" target="_blank" className="hover:text-font-bold transition underline">twitter</a>!
-      </p>
-      <p></p>
       Hey, I am Alex. I am an incoming &nbsp;
       <b>Ph.D. student at Johns Hopkins University</b>. I am supported by an NSF Graduate Research Fellowship. 
     </>

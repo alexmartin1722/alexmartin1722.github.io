@@ -4,13 +4,13 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Alexander
-middle_name: D.
+middle_name: 
 last_name: Martin
 email: alexdmartinresearch@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Alexander Martin's Homepage.
 footer_text:
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: alexander-martin, alex-martin, research, JHU, UofR, Rochester, Hopkins, PhD # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -38,7 +38,7 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -47,8 +47,8 @@ rss_icon: true
 navbar_fixed: true
 footer_fixed: true
 search_enabled: false
-socials_in_search: true
-bib_search: true
+socials_in_search: false
+bib_search: false
 
 # Dimensions
 max_width: 930px

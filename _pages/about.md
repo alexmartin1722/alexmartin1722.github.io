@@ -2,19 +2,20 @@
 layout: about
 title: About
 permalink: /
-subtitle: Applied Scientist @ <a href='https://aws.amazon.com/generative-ai/'>Amazon Artificial General Intelligence (AGI) team.</a>
+subtitle: Ph.D. Student at Johns Hopkins University
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>2795 Augustine Dr</p>
-    <p>Santa Clara, CA, USA</p>
+    Johns Hopkins University <br>
+    3400 N. Charles St. <br>
+    Baltimore, MD 21218
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+social: true  # includes social icons at the bottom of the page
 ---
 
 I am a Ph.D. student at Johns Hopkins University, advised by [Dr. Ben Van Durme](). I am supported by an NSF Graduate Research Fellowship. My research is on computer vision and natural language processing, especially the intersection between video and language.

@@ -15,7 +15,7 @@ profile:
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+social: true  # includes social icons at the bottom of the page
 ---
 
 I am a Ph.D. student at Johns Hopkins University, advised by [Dr. Ben Van Durme](https://www.cs.jhu.edu/~vandurme/). I am supported by an NSF Graduate Research Fellowship. My research is on computer vision and natural language processing, especially the intersection between video and language.

@@ -10,7 +10,7 @@
 @string{bigdata = {IEEE Big Data}}
 @string{tpami = {IEEE Transactions on Pattern Analysis and Machine Intelligence}}
 @string{aaai = {the AAAI Conference on Artificial Intelligence}}
-@string{acmmm = {ACM International Conference on Multimedia}}
+@string{acmmm = {ACM Multimedia}}
 @string{mtap = {Multimedia Tools and Applications}}
 @string{tmm = {IEEE Transactions on Multimedia}}
 @string{wacv = {IEEE Winter Conference on Applications of Computer Vision}}
@@ -26,6 +26,7 @@
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2307.07049}, 
+      pdf={https://arxiv.org/pdf/2307.07049.pdf},
 }
 
 @misc{gantt2024eventkeyedsummarization,
@@ -37,6 +38,8 @@
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2402.06973}, 
+      selected={true},
+      pdf={https://arxiv.org/pdf/2402.06973.pdf},
 }
 
 @inproceedings{10.1145/3581783.3612708,
@@ -49,12 +52,15 @@ address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3581783.3612708},
 doi = {10.1145/3581783.3612708},
 abstract = {With a strong understanding of the target domain from natural language, we produce promising results in translating across large domain gaps and bringing skeletons back to life. In this work, we use text-guided latent diffusion models for zero-shot image-to-image translation (I2I) across large domain gaps (longI2I), where large amounts of new visual features and new geometry need to be generated to enter the target domain. Being able to perform translations across large domain gaps has a wide variety of real-world applications in criminology, astrology, environmental conservation, and paleontology. In this work, we introduce a new task Skull2Animal for translating between skulls and living animals. On this task, we find that unguided Generative Adversarial Networks (GANs) are not capable of translating across large domain gaps. Instead of these traditional I2I methods, we explore the use of guided diffusion and image editing models and provide a new benchmark model, Revive-2I, capable of performing zero-shot I2I via text-prompting latent diffusion models. We find that guidance is necessary for longI2I because, to bridge the large domain gap, prior knowledge about the target domain is needed. In addition, we find that prompting provides the best and most scalable information about the target domain as classifier-guided diffusion models require retraining for specific use cases and lack stronger constraints on the target domain because of the wide variety of images they are trained on.},
-booktitle = {Proceedings of the 31st ACM International Conference on Multimedia},
+booktitle = acmmm,
 pages = {9320–9328},
 numpages = {9},
 keywords = {stable diffusion, large domain gap, image-to-image translation},
 location = {Ottawa ON, Canada},
-series = {MM '23}
+series = {MM '23},
+pdf={https://dl.acm.org/doi/pdf/10.1145/3581783.3612708},
+slides={https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/amart233_jh_edu/EYEInXVWdAVPl2rmp3bpg2ABtmAuLNzueGAbA3HE9Dzs3w?e=jpbPSr},
+preview={skull2animal.png},
 }
 
 @article{ijerph20054539,
@@ -71,26 +77,27 @@ series = {MM '23}
 	volume = {20},
 	year = {2023},
 	bdsk-url-1 = {https://www.mdpi.com/1660-4601/20/5/4539},
-	bdsk-url-2 = {https://doi.org/10.3390/ijerph20054539}
+	bdsk-url-2 = {https://doi.org/10.3390/ijerph20054539},
+  pdf={https://www.mdpi.com/1660-4601/20/5/4539},
 }
 
 @inproceedings{vashishtha-etal-2024-famus,
-    title = "{FAM}u{S}: Frames Across Multiple Sources",
-    author = "Vashishtha, Siddharth  and
-      Martin, Alexander  and
-      Gantt, William  and
-      Van Durme, Benjamin  and
-      White, Aaron",
-    editor = "Duh, Kevin  and
-      Gomez, Helena  and
-      Bethard, Steven",
-    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    title = {FAMuS: Frames Across Multiple Sources},
+    author = {Siddharth Vashishtha and Alexander Martin and William Gantt and Benjamin Van Durme and Aaron Steven White},
+    booktitle = naacl,
     month = jun,
-    year = "2024",
-    address = "Mexico City, Mexico",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.naacl-long.457",
-    doi = "10.18653/v1/2024.naacl-long.457",
-    pages = "8250--8273",
-    abstract = "Understanding event descriptions is a central aspect of language processing, but current approaches focus overwhelmingly on single sentences or documents. Aggregating information about an event across documents can offer a much richer understanding. To this end, we present FAMuS, a new corpus of Wikipedia passages that report on some event, paired with underlying, genre-diverse (non-Wikipedia) source articles for the same event. Events and (cross-sentence) arguments in both report and source are annotated against FrameNet, providing broad coverage of different event types. We present results on two key event understanding tasks enabled by FAMuS: source validation{---}determining whether a document is a valid source for a target report event{---}and cross-document argument extraction{---}full-document argument extraction for a target event from both its report and the correct source article.",
+    year = {2024},
+    address = {Mexico City, Mexico},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2024.naacl-long.457},
+    doi = {10.18653/v1/2024.naacl-long.457},
+    pages = {8250--8273},
+    abstract = {Understanding event descriptions is a central aspect of language processing, but current approaches focus overwhelmingly on single sentences or documents. Aggregating information about an event across documents can offer a much richer understanding. To this end, we present FAMuS, a new corpus of Wikipedia passages that report on some event, paired with underlying, genre-diverse (non-Wikipedia) source articles for the same event. Events and (cross-sentence) arguments in both report and source are annotated against FrameNet, providing broad coverage of different event types. We present results on two key event understanding tasks enabled by FAMuS: source validation{---}determining whether a document is a valid source for a target report event{---}and cross-document argument extraction{---}full-document argument extraction for a target event from both its report and the correct source article.},
+    selected = {true},
+    pdf={https://aclanthology.org/2024.naacl-long.457.pdf},
+    video={https://www.youtube.com/watch?v=tlkPkkHVxc8},
+    slides={https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/amart233_jh_edu/ER5k4QvYX5hJvcVCqMPc8kIBOWQYwgI38wQZSoNfmW2FEA?e=61ih1M},
+    poster={https://livejohnshopkins-my.sharepoint.com/:b:/g/personal/amart233_jh_edu/EViMD1-gK0lFlA8ztKLZeC8BljMekkarf8FYkKl1e0SwJQ?e=xJmJTj},
+    code={https://github.com/FACTSlab/FAMuS},
+    preview={FAMuS_teaser.png},
 }

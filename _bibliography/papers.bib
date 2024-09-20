@@ -16,6 +16,21 @@
 @string{wacv = {IEEE Winter Conference on Applications of Computer Vision}}
 @string{iclr = {International Conference on Learning Representations} }
 
+@inproceedings{sanders2024groundedevents,
+    title = {Grounding Partially-Described Events in Multimodal Data},
+    author = {Kate Sanders and Reno Kriz and David Etter and Hannah Recknor and Alexander Martin and Cameron Carpenter and Jingyang Lin and Benjamin Van Durme},
+    booktitle = emnlp,
+    month = nov,
+    year = {2024},
+    publisher = {Association for Computational Linguistics},
+    url = {https://alexmartin1722.github.io/},
+    doi = {10.18653/v1/2024.naacl-long.457},
+    pages = {8250--8273},
+    abstract = {Organizing perceived change into events is a key element of human cognition, and so to understand data as humans do, AI systems must model events of human interest. While natural language enables straightforward ways to represent complex events, visual data does not facilitate analogous methods and, consequently, introduces unique challenges in event understanding. To tackle complex event modeling in multimodal settings, we introduce a multimodal formulation for arbitrarily complex events and cast the extraction of these events as a three-stage span retrieval task. We propose a corresponding benchmark for this task, MultiVENT Grounded, that consists of 14.5 hours of densely annotated current event videos and 1,168 text documents, containing 22.8K labeled event-centric entities. We propose a collection of LLM-driven approaches to the task of multimodal event analysis, and evaluate both on MultiVENT Grounded. Results illustrate the challenges that abstract event understanding in noisy content poses while also demonstrating  promise in event-centric video-language systems.},
+    selected = {true},
+    pdf={https://alexmartin1722.github.io/},
+    preview={grounded_figs.png},
+}
 
 @misc{barham2023megawikamillionsreportssources,
       title={MegaWika: Millions of reports and their sources across 50 diverse languages}, 
@@ -29,18 +44,20 @@
       pdf={https://arxiv.org/pdf/2307.07049.pdf},
 }
 
-@misc{gantt2024eventkeyedsummarization,
-      title={Event-Keyed Summarization}, 
-      author={William Gantt and Alexander Martin and Pavlo Kuchmiichuk and Aaron Steven White},
-      year={2024},
-      eprint={2402.06973},
-      abstract={We introduce event-keyed summarization (EKS), a novel task that marries traditional summarization and document-level event extraction, with the goal of generating a contextualized summary for a specific event, given a document and an extracted event structure. We introduce a dataset for this task, MUCSUM, consisting of summaries of all events in the classic MUC-4 dataset, along with a set of baselines that comprises both pretrained LM standards in the summarization literature, as well as larger frontier models. We show that ablations that reduce EKS to traditional summarization or structure-to-text yield inferior summaries of target events and that MUCSUM is a robust benchmark for this task. Lastly, we conduct a human evaluation of both reference and model summaries, and provide some detailed analysis of the results.},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2402.06973}, 
-      selected={true},
-      pdf={https://arxiv.org/pdf/2402.06973.pdf},
-      preview={EKS_teaser.png},
+@inproceedings{gantt2024eventkeyedsummarization,
+    title = {Event-Keyed Summarization},
+    author = {William Gantt and Alexander Martin and Pavlo Kuchmiichuk and Aaron Steven White},
+    booktitle = emnlp,
+    month = nov,
+    year = {2024},
+    publisher = {Association for Computational Linguistics},
+    url = {https://arxiv.org/abs/2402.06973},
+    doi = {10.18653/v1/2024.naacl-long.457},
+    pages = {8250--8273},
+    abstract = {We introduce event-keyed summarization (EKS), a novel task that marries traditional summarization and document-level event extraction, with the goal of generating a contextualized summary for a specific event, given a document and an extracted event structure. We introduce a dataset for this task, MUCSUM, consisting of summaries of all events in the classic MUC-4 dataset, along with a set of baselines that comprises both pretrained LM standards in the summarization literature, as well as larger frontier models. We show that ablations that reduce EKS to traditional summarization or structure-to-text yield inferior summaries of target events and that MUCSUM is a robust benchmark for this task. Lastly, we conduct a human evaluation of both reference and model summaries, and provide some detailed analysis of the results.},
+    selected = {true},
+    pdf={https://arxiv.org/pdf/2402.06973.pdf},
+    preview={EKS_teaser.png},
 }
 
 @inproceedings{10.1145/3581783.3612708,

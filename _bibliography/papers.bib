@@ -16,6 +16,38 @@
 @string{wacv = {IEEE Winter Conference on Applications of Computer Vision}}
 @string{iclr = {International Conference on Learning Representations} }
 
+
+
+@inproceedings{reddy2025videocolbert,
+    title = {Video-ColBERT: Contextualized Late Interaction for Text-to-Video Retrieval},
+    author = {Arun Reddy*, Alexander Martin*, Eugene Yang, Andrew Yates, Kate Sanders, Kenton Murray, Reno Kriz, Celso M de Melo, Benjamin Van Durme, Rama Chellappa},
+    booktitle = cvpr,
+    month = jun,
+    year = {2025},
+    publisher = {IEEE Conference on Computer Vision and Pattern Recognition},
+    pages = {},
+    abstract = {Efficiently retrieving and synthesizing information from large-scale multimodal collections has become a critical challenge. However, existing video retrieval datasets suffer from scope limitations, primarily focusing on matching descriptive but vague queries with small collections of professionally edited, English-centric videos. To address this gap, we introduce MultiVENT 2.0, a large-scale, multilingual event-centric video retrieval benchmark featuring a collection of more than 218,000 news videos and 3,906 queries targeting specific world events. These queries specifically target information found in the visual content, audio, embedded text, and text metadata of the videos, requiring systems leverage all these sources to succeed at the task. Preliminary results show that state-of-the-art vision-language models struggle significantly with this task, and while alternative approaches show promise, they are still insufficient to adequately address this problem. These findings underscore the need for more robust multimodal retrieval systems, as effective video retrieval is a crucial step towards multimodal content understanding and generation.},
+    selected = {true},
+    url={https://arxiv.org/abs/2410.11619}, 
+    pdf={https://arxiv.org/pdf/2410.11619},
+    preview={},
+}
+
+@inproceedings{kriz2025multivent20massivemultilingual,
+    title = {MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval},
+    author = {Reno Kriz and Kate Sanders and David Etter and Kenton Murray and Cameron Carpenter and Kelly Van Ochten and Hannah Recknor and Jimena Guallar-Blasco and Alexander Martin and Ronald Colaianni and Nolan King and Eugene Yang and Benjamin Van Durme},
+    booktitle = cvpr,
+    month = jun,
+    year = {2025},
+    publisher = {IEEE Conference on Computer Vision and Pattern Recognition},
+    pages = {},
+    abstract = {Efficiently retrieving and synthesizing information from large-scale multimodal collections has become a critical challenge. However, existing video retrieval datasets suffer from scope limitations, primarily focusing on matching descriptive but vague queries with small collections of professionally edited, English-centric videos. To address this gap, we introduce MultiVENT 2.0, a large-scale, multilingual event-centric video retrieval benchmark featuring a collection of more than 218,000 news videos and 3,906 queries targeting specific world events. These queries specifically target information found in the visual content, audio, embedded text, and text metadata of the videos, requiring systems leverage all these sources to succeed at the task. Preliminary results show that state-of-the-art vision-language models struggle significantly with this task, and while alternative approaches show promise, they are still insufficient to adequately address this problem. These findings underscore the need for more robust multimodal retrieval systems, as effective video retrieval is a crucial step towards multimodal content understanding and generation.},
+    selected = {true},
+    url={https://arxiv.org/abs/2410.11619}, 
+    pdf={https://arxiv.org/pdf/2410.11619},
+    preview={},
+}
+
 @misc{walden2024crossdocumenteventkeyedsummarization,
       title={Cross-Document Event-Keyed Summarization}, 
       author={William Walden and Pavlo Kuchmiichuk and Alexander Martin and Chihsheng Jin and Angela Cao and Claire Sun and Curisia Allen and Aaron Steven White},
@@ -26,17 +58,6 @@
       url={https://arxiv.org/abs/2410.14795}, 
       pdf={https://arxiv.org/pdf/2410.14795},
       preview={CDEKS_teaser.png},
-}
-
-@misc{kriz2024multivent20massivemultilingual,
-      title={MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval}, 
-      author={Reno Kriz and Kate Sanders and David Etter and Kenton Murray and Cameron Carpenter and Kelly Van Ochten and Hannah Recknor and Jimena Guallar-Blasco and Alexander Martin and Ronald Colaianni and Nolan King and Eugene Yang and Benjamin Van Durme},
-      year={2024},
-      eprint={2410.11619},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.11619}, 
-      pdf={https://arxiv.org/pdf/2410.11619},
 }
 
 @inproceedings{sanders2024groundedevents,
@@ -145,7 +166,7 @@ preview={skull2animal.png},
     doi = {10.18653/v1/2024.naacl-long.457},
     pages = {8250--8273},
     abstract = {Understanding event descriptions is a central aspect of language processing, but current approaches focus overwhelmingly on single sentences or documents. Aggregating information about an event across documents can offer a much richer understanding. To this end, we present FAMuS, a new corpus of Wikipedia passages that report on some event, paired with underlying, genre-diverse (non-Wikipedia) source articles for the same event. Events and (cross-sentence) arguments in both report and source are annotated against FrameNet, providing broad coverage of different event types. We present results on two key event understanding tasks enabled by FAMuS: source validation{---}determining whether a document is a valid source for a target report event{---}and cross-document argument extraction{---}full-document argument extraction for a target event from both its report and the correct source article.},
-    selected = {true},
+    selected = {false},
     pdf={https://aclanthology.org/2024.naacl-long.457.pdf},
     video={https://www.youtube.com/watch?v=tlkPkkHVxc8},
     slides={https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/amart233_jh_edu/ER5k4QvYX5hJvcVCqMPc8kIBOWQYwgI38wQZSoNfmW2FEA?e=61ih1M},

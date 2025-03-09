@@ -1,10 +1,10 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
+permalink: /talks/
+title: Talks
 description:
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 <!-- _pages/publications.md -->
@@ -15,6 +15,6 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography -f papers %}
+{% bibliography -f talks %}
 
 </div>

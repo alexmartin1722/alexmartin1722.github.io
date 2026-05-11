@@ -4,5 +4,8 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - HanxiangQin/omni-col-press
   - alexmartin1722/wikivideo
+  - alexmartin1722/mirage
+  - tskow99/RANKVIDEO-Reasoning-Reranker
   - FACTSLab/FAMuS

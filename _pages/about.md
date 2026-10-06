@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a Ph.D. student at Johns Hopkins University, advised by [Dr. Ben Van Durme](https://www.cs.jhu.edu/~vandurme/). My research focuses on multimodal retrieval and understanding, specifically advancing efficienct and scalable collaborative multimodal search and reasoning.
+I am a Ph.D. student at Johns Hopkins University, advised by [Dr. Ben Van Durme](https://www.cs.jhu.edu/~vandurme/), and an NSF Graduate Research Fellow. My research focuses on multimodal retrieval and understanding, specifically advancing efficient and scalable collaborative multimodal search and reasoning.
 
 
 The problems I'm interested in are:

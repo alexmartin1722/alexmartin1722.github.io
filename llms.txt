@@ -1,0 +1,63 @@
+# Alexander Martin
+
+> Alexander Martin is a Ph.D. student at Johns Hopkins University and NSF Graduate Research Fellow building collaborative, multimodal agents for knowledge-intensive tasks: video retrieval, multimodal RAG, and grounded article generation.
+
+Alexander Martin is a Ph.D. Student at Johns Hopkins University, advised by [Benjamin Van Durme](https://www.cs.jhu.edu/~vandurme/), and a recipient of the NSF Graduate Research Fellowship. Before Johns Hopkins, Alexander received a B.S. from the University of Rochester.
+
+Research interests: Multimodal retrieval, Video retrieval, Video understanding, Multimodal retrieval-augmented generation (RAG), Late interaction retrieval models, Grounded article generation, Collaborative document authoring, Evaluation of text generation, Natural language processing.
+
+## Research goal
+
+Collaborative, multimodal agents for knowledge-intensive tasks. Agents that search, read, and watch across languages and modalities, then work alongside people to write and maintain grounded, trustworthy knowledge.
+
+## Research threads
+
+- **Multimodal understanding**: Grounding events, answering questions, and reasoning under uncertainty over video, audio, and text.
+- **Efficient multimodal retrieval**: Scalable search over large multilingual video collections with late interaction, index compression, and reranking.
+- **Collaborative article generation**: Writing and continually maintaining grounded articles from many videos and documents, with people in the loop.
+- **Evaluation**: Measuring text generated from any modality, and understanding what retrieval metrics say about RAG.
+- **Events & multi-source text** (foundations): Where it started: understanding events described across many documents and sources, and summarizing them faithfully.
+
+## Papers
+
+Papers marked (first author) are first- or co-first-authored by Alexander. The full list is on the [publications page](https://alexmartin1722.github.io/publications/).
+
+- [Beyond Relevance: On the Relationship Between Retrieval and RAG Information Coverage](https://arxiv.org/abs/2603.08819): arXiv 2026; thread: Evaluation
+- [Seeing Through the MiRAGE: Evaluating Multimodal Retrieval Augmented Generation](https://arxiv.org/abs/2510.24870): arXiv 2026; thread: Evaluation (first author)
+- [Knowledge Pull Requests for Continual Document Authoring](https://arxiv.org/abs/2609.26634): arXiv 2026; thread: Collaborative article generation (first author)
+- [MARQUIS: A Three-Stage Pipeline for Video Retrieval-Augmented Generation](https://aclanthology.org/2026.magmar-main.13/): MAGMaR Workshop 2026; thread: Collaborative article generation
+- [Findings of the MAGMaR 2026 Shared Task](https://aclanthology.org/2026.magmar-main.16/): MAGMaR Workshop 2026; thread: Collaborative article generation (first author)
+- [MultiVENT-Raw: A Benchmark for Retrieval and Reasoning over Raw Videos](https://arxiv.org/abs/2609.28437): arXiv 2026; thread: Efficient multimodal retrieval
+- [Multi-Vector Index Compression in Any Modality](https://arxiv.org/abs/2602.21202): arXiv 2026; thread: Efficient multimodal retrieval (first author)
+- [RANKVIDEO: Reasoning Reranking for Text-to-Video Retrieval](https://arxiv.org/abs/2602.02444): arXiv 2026; thread: Efficient multimodal retrieval (first author)
+- [Unified Multimodal Uncertain Inference](https://arxiv.org/abs/2604.08701): arXiv 2026; thread: Multimodal understanding
+- [WikiVideo: Article Generation from Multiple Videos](https://arxiv.org/abs/2504.00939): arXiv 2025; thread: Collaborative article generation (first author)
+- [MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion](https://arxiv.org/abs/2503.20698): arXiv 2025; thread: Efficient multimodal retrieval
+- [Video-ColBERT: Contextualized Late Interaction for Text-to-Video Retrieval](https://arxiv.org/abs/2503.19009v1): CVPR 2025; thread: Efficient multimodal retrieval (first author)
+- [MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval](https://arxiv.org/abs/2410.11619): CVPR 2025; thread: Efficient multimodal retrieval
+- [Grounding Partially-Described Events in Multimodal Data](https://arxiv.org/abs/2410.05267): EMNLP 2024; thread: Multimodal understanding
+- [Cross-Document Event-Keyed Summarization](https://arxiv.org/abs/2410.14795): arXiv 2024; thread: Events & multi-source text
+- [FAMuS: Frames Across Multiple Sources](https://aclanthology.org/2024.naacl-long.457): NAACL 2024; thread: Events & multi-source text
+- [Event-Keyed Summarization](https://arxiv.org/abs/2402.06973): EMNLP 2024; thread: Events & multi-source text
+- [MegaWika: Millions of reports and their sources across 50 diverse languages](https://arxiv.org/abs/2307.07049): arXiv 2023; thread: Events & multi-source text
+
+## Pages
+
+- [About](https://alexmartin1722.github.io/): bio, news, and an interactive research tree
+- [Publications](https://alexmartin1722.github.io/publications/): all papers with abstracts and BibTeX
+- [CV (PDF)](https://alexmartin1722.github.io/assets/pdf/CV.pdf)
+- [Talks](https://alexmartin1722.github.io/talks/)
+- [Repositories](https://alexmartin1722.github.io/repositories/)
+
+## Profiles
+
+- [Google Scholar](https://scholar.google.com/citations?user=6_4ethMAAAAJ)
+- [Semantic Scholar](https://www.semanticscholar.org/author/2352036309)
+- [ORCID](https://orcid.org/0000-0002-8863-4002)
+- [GitHub](https://github.com/alexmartin1722)
+- [LinkedIn](https://www.linkedin.com/in/alexanderdpmartin)
+- [X](https://x.com/alexdmartin314)
+
+## Contact
+
+- Email: alexdmartinresearch@gmail.com

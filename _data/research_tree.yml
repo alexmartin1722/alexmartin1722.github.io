@@ -1,0 +1,211 @@
+# Research tree shown on the about page (see _includes/research_tree.liquid).
+#
+# goal      -> the crown of the tree
+# branches  -> research threads, drawn left to right in the order listed
+# roots     -> foundational work, drawn underground
+# papers    -> leaves; `branch` is a branch id (or "roots"),
+#              `builds_on` lists paper ids and is drawn as a vine between leaves.
+#              Leaves on a branch are ordered by year (then by list order).
+#              Set `status: ongoing` for work in progress (drawn as a hollow bud).
+#              Set `type: dataset` (drawn as fruit) or `type: both` (fruit with a leaf);
+#              papers without a type are methods (drawn as leaves).
+#              Set `first_author: true` to bold the label (first / co-first author).
+
+goal:
+  title: Collaborative, multimodal agents for knowledge-intensive tasks
+  blurb: >
+    Agents that search, read, and watch across languages and modalities, then work
+    alongside people to write and maintain grounded, trustworthy knowledge.
+
+roots:
+  name: Events & multi-source text
+  color: "#a0704a"
+  blurb: >
+    Where it started: understanding events described across many documents and
+    sources, and summarizing them faithfully.
+
+branches:
+  - id: understanding
+    name: Multimodal understanding
+    color: "#8e5cc4"
+    blurb: Grounding events, answering questions, and reasoning under uncertainty over video, audio, and text.
+  - id: retrieval
+    name: Efficient multimodal retrieval
+    color: "#3b82c4"
+    blurb: Scalable search over large multilingual video collections with late interaction, index compression, and reranking.
+  - id: generation
+    name: Collaborative article generation
+    color: "#2e9e6a"
+    blurb: Writing and continually maintaining grounded articles from many videos and documents, with people in the loop.
+  - id: evaluation
+    name: Evaluation
+    color: "#d08a1e"
+    label_dx: 40 # nudge the branch name right (label_dy moves it down)
+    blurb: Measuring text generated from any modality, and understanding what retrieval metrics say about RAG.
+
+papers:
+  # --- roots ---
+  - id: megawika
+    label: MegaWika
+    title: "MegaWika: Millions of reports and their sources across 50 diverse languages"
+    branch: roots
+    year: 2023
+    venue: arXiv
+    url: https://arxiv.org/abs/2307.07049
+    type: dataset
+  - id: eks
+    label: EKS
+    title: Event-Keyed Summarization
+    branch: roots
+    year: 2024
+    venue: EMNLP
+    url: https://arxiv.org/abs/2402.06973
+    type: both
+  - id: famus
+    label: FAMuS
+    title: "FAMuS: Frames Across Multiple Sources"
+    branch: roots
+    year: 2024
+    venue: NAACL
+    url: https://aclanthology.org/2024.naacl-long.457
+    type: dataset
+  - id: cdeks
+    label: CDEKS
+    title: Cross-Document Event-Keyed Summarization
+    branch: roots
+    year: 2024
+    venue: arXiv
+    url: https://arxiv.org/abs/2410.14795
+    type: dataset
+    builds_on: [eks, famus]
+
+  # --- multimodal understanding ---
+  - id: grounding
+    label: Event Grounding
+    title: Grounding Partially-Described Events in Multimodal Data
+    branch: understanding
+    year: 2024
+    venue: EMNLP
+    url: https://arxiv.org/abs/2410.05267
+    type: both
+    builds_on: [multivent2, megawika]
+  - id: umui
+    label: Uncertain Inference
+    title: Unified Multimodal Uncertain Inference
+    branch: understanding
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2604.08701
+
+  # --- efficient multimodal retrieval ---
+  - id: multivent2
+    label: MultiVENT 2.0
+    title: "MultiVENT 2.0: A Massive Multilingual Benchmark for Event-Centric Video Retrieval"
+    branch: retrieval
+    year: 2025
+    venue: CVPR
+    url: https://arxiv.org/abs/2410.11619
+    type: dataset
+    builds_on: [megawika]
+  - id: videocolbert
+    label: Video-ColBERT
+    title: "Video-ColBERT: Contextualized Late Interaction for Text-to-Video Retrieval"
+    branch: retrieval
+    year: 2025
+    venue: CVPR
+    url: https://arxiv.org/abs/2503.19009v1
+    first_author: true
+    builds_on: [multivent2]
+  - id: mmmorrf
+    label: MMMORRF
+    title: "MMMORRF: Multimodal Multilingual Modularized Reciprocal Rank Fusion"
+    branch: retrieval
+    year: 2025
+    venue: arXiv
+    url: https://arxiv.org/abs/2503.20698
+    builds_on: [multivent2]
+  - id: rankvideo
+    label: RankVideo
+    title: "RANKVIDEO: Reasoning Reranking for Text-to-Video Retrieval"
+    branch: retrieval
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2602.02444
+    first_author: true
+    builds_on: [multivent2]
+  - id: mvcompress
+    label: Index Compression
+    title: Multi-Vector Index Compression in Any Modality
+    branch: retrieval
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2602.21202
+    first_author: true
+    builds_on: [multivent2, videocolbert]
+  - id: mvraw
+    label: MultiVENT-Raw
+    title: "MultiVENT-Raw: A Benchmark for Retrieval and Reasoning over Raw Videos"
+    branch: retrieval
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2609.28437
+    type: dataset
+    builds_on: [multivent2, magmar, mirage]
+
+  # --- collaborative article generation ---
+  - id: wikivideo
+    label: WikiVideo
+    title: "WikiVideo: Article Generation from Multiple Videos"
+    branch: generation
+    year: 2025
+    venue: arXiv
+    url: https://arxiv.org/abs/2504.00939
+    first_author: true
+    type: both
+    builds_on: [multivent2, cdeks, megawika]
+  - id: magmar
+    label: MAGMaR Workshop
+    title: Findings of the MAGMaR 2026 Shared Task
+    branch: generation
+    year: 2026
+    venue: MAGMaR Workshop
+    url: https://aclanthology.org/2026.magmar-main.16/
+    first_author: true
+    type: dataset
+    builds_on: [multivent2, wikivideo, mirage]
+  - id: marquis
+    label: MARQUIS
+    title: "MARQUIS: A Three-Stage Pipeline for Video Retrieval-Augmented Generation"
+    branch: generation
+    year: 2026
+    venue: MAGMaR Workshop
+    url: https://aclanthology.org/2026.magmar-main.13/
+    builds_on: [magmar]
+  - id: kpr
+    label: Knowledge PRs
+    title: Knowledge Pull Requests for Continual Document Authoring
+    branch: generation
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2609.26634
+    first_author: true
+    builds_on: [wikivideo]
+
+  # --- evaluation ---
+  - id: mirage
+    label: MiRAGE
+    title: "Seeing Through the MiRAGE: Evaluating Multimodal Retrieval Augmented Generation"
+    branch: evaluation
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2510.24870
+    first_author: true
+    builds_on: [wikivideo]
+  - id: beyondrel
+    label: Beyond Relevance
+    title: "Beyond Relevance: On the Relationship Between Retrieval and RAG Information Coverage"
+    branch: evaluation
+    year: 2026
+    venue: arXiv
+    url: https://arxiv.org/abs/2603.08819
+    builds_on: [mirage]

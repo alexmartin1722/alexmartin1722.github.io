@@ -13,6 +13,7 @@ profile:
     3400 N. Charles St. <br>
     Baltimore, MD 21218
 
+research_tree: true  # includes the research tree from _data/research_tree.yml
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page

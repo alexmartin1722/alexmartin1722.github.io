@@ -1,0 +1,386 @@
+/*******************************************************************************
+ * Research tree (about page)
+ ******************************************************************************/
+
+.research-tree {
+  --rt-bark: #8a6a4f;
+  --rt-soil: rgba(138, 106, 79, 0.08);
+  --rt-goal: #e0a526;
+  --rt-canopy: #e9f4e1;
+  --rt-canopy-line: #a7cf98;
+  margin: 0.5rem 0 2rem;
+
+  .rt-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .rt-svg {
+    display: block;
+    width: 100%;
+    min-width: 720px;
+    height: auto;
+    font-family: inherit;
+  }
+
+  .rt-scroll-hint {
+    display: none;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+
+  @media (max-width: 720px) {
+    .rt-scroll-hint {
+      display: block;
+    }
+  }
+
+  // ---- wood ----
+  .rt-trunk {
+    fill: var(--rt-bark);
+  }
+  .rt-branch {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    opacity: 0.75;
+  }
+  .rt-twig {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    opacity: 0.7;
+  }
+  .rt-root {
+    fill: none;
+    stroke: var(--rt-bark);
+    stroke-width: 5;
+    stroke-linecap: round;
+    opacity: 0.7;
+  }
+  .rt-ground {
+    fill: none;
+    stroke: var(--rt-bark);
+    stroke-width: 1.5;
+    opacity: 0.5;
+  }
+  .rt-soil {
+    fill: var(--rt-soil);
+  }
+
+  // ---- canopy ----
+  .rt-crown {
+    fill: var(--rt-canopy);
+  }
+  .rt-crown-line {
+    fill: var(--rt-canopy-line);
+  }
+  .rt-tuft {
+    fill: none;
+    stroke: var(--rt-canopy-line);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+  // ---- goal ----
+  .rt-goal {
+    cursor: pointer;
+    outline: none;
+  }
+  .rt-glow-stop0 {
+    stop-color: var(--rt-goal);
+    stop-opacity: 0.45;
+  }
+  .rt-glow-stop1 {
+    stop-color: var(--rt-goal);
+    stop-opacity: 0;
+  }
+  .rt-goal-core {
+    fill: var(--rt-goal);
+  }
+  .rt-lens {
+    fill: #1f1f24;
+  }
+  .rt-frame {
+    fill: none;
+    stroke: #1f1f24;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+  }
+  .rt-glint {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    opacity: 0.8;
+  }
+  .rt-rays line {
+    stroke: var(--rt-goal);
+    stroke-width: 3.5;
+    stroke-linecap: round;
+  }
+  .rt-rays {
+    animation: rt-spin 120s linear infinite;
+  }
+  .rt-beam {
+    fill: url(#rt-beam);
+  }
+  .rt-beam-stop0 {
+    stop-color: var(--rt-goal);
+    stop-opacity: 0.13;
+  }
+  .rt-beam-stop1 {
+    stop-color: var(--rt-goal);
+    stop-opacity: 0;
+  }
+  .rt-goal-text {
+    text-anchor: middle;
+    font-size: 21px;
+    font-weight: 600;
+    fill: var(--global-text-color);
+  }
+  .rt-goal:hover .rt-goal-core,
+  .rt-goal:focus-visible .rt-goal-core {
+    filter: brightness(1.1);
+    stroke: var(--global-text-color);
+    stroke-width: 1.5;
+  }
+
+  // ---- labels ----
+  .rt-branch-label {
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    paint-order: stroke;
+    stroke: var(--rt-canopy);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+  }
+  .rt-under {
+    stroke: var(--global-bg-color);
+  }
+  .rt-branch-label:hover,
+  .rt-branch-label:focus-visible {
+    text-decoration: underline;
+  }
+
+  // ---- leaves ----
+  .rt-leaf {
+    cursor: pointer;
+    outline: none;
+  }
+  .rt-hit {
+    fill: transparent;
+  }
+  .rt-mark {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.15s;
+  }
+  .rt-mark-shape {
+    stroke-width: 1.5;
+  }
+  .rt-stem {
+    fill: none;
+    stroke: var(--rt-bark);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+  }
+  .rt-shine {
+    fill: #fff;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .rt-ongoing .rt-mark-shape {
+    fill-opacity: 0;
+    stroke-dasharray: 3 2;
+  }
+  .rt-ongoing .rt-shine {
+    display: none;
+  }
+  .rt-leaf-label {
+    font-size: 14.5px;
+    fill: var(--global-text-color);
+    paint-order: stroke;
+    stroke: var(--rt-canopy);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+  }
+  .rt-leaf-label.rt-under {
+    stroke: var(--global-bg-color);
+  }
+  .rt-leaf:hover .rt-mark,
+  .rt-leaf:focus-visible .rt-mark,
+  .rt-leaf.rt-focus .rt-mark {
+    transform: scale(1.45);
+  }
+  .rt-leaf-label.rt-first {
+    font-weight: 700;
+  }
+  .rt-leaf.rt-focus .rt-leaf-label {
+    text-decoration: underline;
+  }
+
+  // ---- vines ----
+  .rt-vine {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .rt-vine-path {
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+  .rt-sap {
+    pointer-events: none;
+  }
+
+  // ---- highlight state ----
+  .rt-dim {
+    .rt-leaf,
+    .rt-branch,
+    .rt-branch-label,
+    .rt-root {
+      opacity: 0.25;
+      transition: opacity 0.2s;
+    }
+    .rt-vine {
+      opacity: 0.08;
+    }
+    .rt-on {
+      opacity: 1;
+    }
+    .rt-vine.rt-on {
+      opacity: 1;
+    }
+    .rt-vine.rt-on .rt-vine-path {
+      stroke-width: 2.8;
+    }
+  }
+
+  // ---- grow-in animation ----
+  .rt-leaf {
+    transition: opacity 0.4s;
+    transition-delay: var(--rt-delay, 0ms);
+  }
+  .rt-seed .rt-leaf,
+  .rt-seed .rt-vine {
+    opacity: 0;
+  }
+  .rt-dim .rt-leaf,
+  .rt-dim .rt-leaf.rt-on {
+    transition-delay: 0ms;
+  }
+
+  @keyframes rt-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rt-rays {
+      animation: none;
+    }
+    .rt-leaf,
+    .rt-mark,
+    .rt-vine {
+      transition: none;
+    }
+  }
+
+  // ---- info panel ----
+  .rt-panel {
+    position: relative;
+    min-height: 6rem;
+    margin-top: 0.5rem;
+    padding: 0.9rem 2.5rem 0.9rem 1.1rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.5rem;
+    background: var(--global-card-bg-color);
+  }
+  .rt-kicker {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--rt-goal);
+  }
+  .rt-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0.15rem 0;
+  }
+  .rt-meta {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  .rt-blurb {
+    margin: 0.4rem 0 0;
+    font-size: 0.92rem;
+  }
+  .rt-rel {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+
+    span {
+      color: var(--global-text-color-light);
+      margin-right: 0.4rem;
+    }
+  }
+  .rt-chip {
+    display: inline-block;
+    margin: 0.15rem 0.3rem 0.15rem 0;
+    padding: 0.05rem 0.55rem;
+    font-size: 0.8rem;
+    color: var(--global-text-color);
+    background: transparent;
+    border: 1.5px solid var(--rt-c);
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--rt-c);
+      color: #fff;
+    }
+  }
+  .rt-credit {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+  .rt-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.2rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+  .rt-close {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.6rem;
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--global-text-color-light);
+    cursor: pointer;
+  }
+}
+
+html[data-theme="dark"] .research-tree {
+  --rt-bark: #b08d6e;
+  --rt-soil: rgba(176, 141, 110, 0.1);
+  --rt-goal: #f0b93a;
+  --rt-canopy: #233128;
+  --rt-canopy-line: #3f6148;
+}

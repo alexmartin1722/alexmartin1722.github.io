@@ -27,10 +27,44 @@ layout: default
           {% endif %}
           {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <div class="profile-photo" data-photo="professional">
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
+          </div>
+          {% if page.profile.recent_image %}
+            <!-- a second, more recent photo, swapped in with the toggle below -->
+            <div class="profile-photo" data-photo="recent" hidden>
+              <img
+                src="{{ page.profile.recent_image | prepend: 'assets/img/' | relative_url }}"
+                class="{{ profile_image_class }} profile-recent-img"
+                alt="Recent photo of {{ site.first_name }} {{ site.last_name }}"
+                loading="lazy"
+              >
+            </div>
+            <div class="profile-toggle" role="group" aria-label="Choose profile photo">
+              <button type="button" data-photo="professional" aria-pressed="true">Professional</button>
+              <button type="button" data-photo="recent" aria-pressed="false">Recent</button>
+            </div>
+            {% if page.profile.recent_caption %}
+              <p class="profile-caption" data-photo="recent" hidden>{{ page.profile.recent_caption }}</p>
+            {% endif %}
+            <script>
+              document.querySelectorAll('.profile-toggle button').forEach(function (button) {
+                button.addEventListener('click', function () {
+                  var choice = button.getAttribute('data-photo');
+                  document.querySelectorAll('.profile [data-photo]').forEach(function (el) {
+                    if (el.tagName === 'BUTTON') {
+                      el.setAttribute('aria-pressed', String(el.getAttribute('data-photo') === choice));
+                    } else {
+                      el.hidden = el.getAttribute('data-photo') !== choice;
+                    }
+                  });
+                });
+              });
+            </script>
+          {% endif %}
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>

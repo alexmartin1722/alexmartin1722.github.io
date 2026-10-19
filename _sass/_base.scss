@@ -211,6 +211,68 @@ ul.task-list input[type="checkbox"] {
   margin-left: 1rem;
 }
 
+// embedded PDF on the CV page
+.cv-embed {
+  display: block;
+  width: 100%;
+  height: 85vh;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+}
+
+// professional / recent photo toggle on the about page
+.profile {
+  .profile-photo[data-photo="recent"] {
+    overflow: hidden;
+    border-radius: 0.25rem;
+  }
+
+  // square crop, zoomed toward the face
+  .profile-recent-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 52% 50%;
+    transform: scale(2.3);
+    transform-origin: 53% 39.6%;
+  }
+
+  .profile-toggle {
+    display: flex;
+    margin: 0.5rem 0 0.4rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 2rem;
+    overflow: hidden;
+
+    button {
+      flex: 1;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.85rem;
+      color: var(--global-text-color);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &[aria-pressed="true"] {
+        color: var(--global-hover-text-color);
+        background: var(--global-theme-color);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--global-theme-color);
+        outline-offset: -2px;
+      }
+    }
+  }
+
+  .profile-caption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+}
+
 .profile.float-left {
   margin-right: 1rem;
 }

@@ -8,6 +8,8 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
+  recent_image: prof_pic2.JPG # second photo, shown with the Professional / Recent toggle
+  recent_caption: "I haven't taken a professional photo in years, so here's what I look like now (Oct 2026)!"
   address: >
     Johns Hopkins University <br>
     3400 N. Charles St. <br>

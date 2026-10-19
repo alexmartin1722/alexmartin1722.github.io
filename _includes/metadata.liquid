@@ -216,26 +216,53 @@
     {% capture link %}https://www.zotero.org/{{ site.zotero_username }}{% endcapture %}
     {% assign sameaslinks = sameaslinks | push: link %}
   {% endif %}
-  {% if sameaslinks != blank %}
-    {% assign sameaslinks = sameaslinks | split: '' %}
+  {% if site.github_username %}
+    {% capture link %}https://github.com/{{ site.github_username }}{% endcapture %}
+    {% unless sameaslinks contains link %}{% assign sameaslinks = sameaslinks | push: link %}{% endunless %}
   {% endif %}
 
+  {% comment %}
+    A Person record (details from `person:` in _config.yml) plus the current page, linked to it by @id.
+    Every value goes through jsonify so quotes and special characters are escaped correctly.
+  {% endcomment %}
+  {% capture site_root %}{{ site.url }}{{ site.baseurl }}/{% endcapture %}
+  {% capture person_id %}{{ site_root }}#person{% endcapture %}
+  {% capture page_url %}{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}{% endcapture %}
+  {% if page.description %}{% assign page_description = page.description %}{% else %}{% assign page_description = site.description %}{% endif %}
+  {% assign person = site.person %}
   <script type="application/ld+json">
     {
-        "author":
+      "@context": "https://schema.org",
+      "@graph": [
         {
-            "@type": "Person",
-            "name": "{{ author_name }}"
+          "@type": "Person",
+          "@id": {{ person_id | jsonify }},
+          "name": {{ author_name | strip | jsonify }},
+          "url": {{ site_root | jsonify }},
+          {% if site.og_image %}"image": {{ site.og_image | jsonify }},{% endif %}
+          {% if site.email %}"email": {{ site.email | prepend: 'mailto:' | jsonify }},{% endif %}
+          "description": {{ site.description | strip_newlines | strip | jsonify }},
+          {% if person.job_title %}"jobTitle": {{ person.job_title | jsonify }},{% endif %}
+          {% if person.affiliation %}
+          "affiliation": { "@type": "CollegeOrUniversity", "name": {{ person.affiliation | jsonify }}{% if person.affiliation_url %}, "url": {{ person.affiliation_url | jsonify }}{% endif %} },
+          {% endif %}
+          {% if person.alumni_of %}
+          "alumniOf": [{% for school in person.alumni_of %}{ "@type": "CollegeOrUniversity", "name": {{ school | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+          {% endif %}
+          {% if person.awards %}"award": {{ person.awards | jsonify }},{% endif %}
+          {% if person.knows_about %}"knowsAbout": {{ person.knows_about | jsonify }},{% endif %}
+          "sameAs": {{ sameaslinks | jsonify }}
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks }},
-        {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        {
+          "@type": "{% if page.url == '/' %}ProfilePage{% elsif is_blog_post %}BlogPosting{% else %}WebPage{% endif %}",
+          "@id": {{ page_url | jsonify }},
+          "url": {{ page_url | jsonify }},
+          "name": {% if page.title and page.url != '/' %}{{ page.title | append: ' | ' | append: author_name | strip | jsonify }}{% else %}{{ author_name | strip | jsonify }}{% endif %},
+          "description": {{ page_description | strip_newlines | strip | jsonify }},
+          {% if page.url == '/' %}"mainEntity": { "@id": {{ person_id | jsonify }} },{% else %}"about": { "@id": {{ person_id | jsonify }} },{% endif %}
+          "author": { "@id": {{ person_id | jsonify }} }
+        }
+      ]
     }
   </script>
 {% endif %}

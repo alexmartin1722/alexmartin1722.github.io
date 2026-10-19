@@ -133,7 +133,11 @@
       const a = (Math.PI / 8) * i;
       const r1 = 32;
       const r2 = i % 2 ? 42 : 52;
-      el("line", { x1: GOAL.x + Math.cos(a) * r1, y1: GOAL.y + Math.sin(a) * r1, x2: GOAL.x + Math.cos(a) * r2, y2: GOAL.y + Math.sin(a) * r2 }, rays);
+      el(
+        "line",
+        { x1: GOAL.x + Math.cos(a) * r1, y1: GOAL.y + Math.sin(a) * r1, x2: GOAL.x + Math.cos(a) * r2, y2: GOAL.y + Math.sin(a) * r2 },
+        rays
+      );
     }
     el("circle", { cx: GOAL.x, cy: GOAL.y, r: 25, class: "rt-goal-core" }, goalG);
     // the sun is wearing sunglasses
@@ -141,7 +145,14 @@
     const lensY = GOAL.y - 3;
     [-1, 1].forEach((side) => {
       const lx = GOAL.x + side * 10.5;
-      el("path", { class: "rt-lens", d: `M${lx - 8.5},${lensY - 4} L${lx + 8.5},${lensY - 4} Q${lx + 8.5},${lensY + 7} ${lx},${lensY + 7} Q${lx - 8.5},${lensY + 7} ${lx - 8.5},${lensY - 4} Z` }, shades);
+      el(
+        "path",
+        {
+          class: "rt-lens",
+          d: `M${lx - 8.5},${lensY - 4} L${lx + 8.5},${lensY - 4} Q${lx + 8.5},${lensY + 7} ${lx},${lensY + 7} Q${lx - 8.5},${lensY + 7} ${lx - 8.5},${lensY - 4} Z`,
+        },
+        shades
+      );
       el("path", { class: "rt-glint", d: `M${lx - 4.5},${lensY - 1} L${lx - 1.5},${lensY + 2.5}` }, shades);
       el("path", { class: "rt-frame", d: `M${GOAL.x + side * 19},${lensY - 3} L${GOAL.x + side * 24.5},${lensY - 6}` }, shades);
     });
@@ -168,14 +179,20 @@
       const c2 = { x: p2.x - (lean.x / leanLen) * BRANCH_LEN * 0.23, y: p2.y - (lean.y / leanLen) * BRANCH_LEN * 0.23 };
       branchEls[b.id] = [];
 
-      branchEls[b.id].push(el("path", { class: "rt-branch", stroke: b.color, d: `M${p0.x},${p0.y} C${c1.x},${c1.y} ${c2.x},${c2.y} ${p2.x},${p2.y}` }, layers.wood));
+      branchEls[b.id].push(
+        el("path", { class: "rt-branch", stroke: b.color, d: `M${p0.x},${p0.y} C${c1.x},${c1.y} ${c2.x},${c2.y} ${p2.x},${p2.y}` }, layers.wood)
+      );
 
       // branch name on (up to) two short lines centered over the tip, to keep the crown narrow at the top
       const nameLines = splitTwo(b.name, 2);
       // optional nudge from the data file (label_dx / label_dy)
       const labelX = p2.x + (b.label_dx || 0);
       const labelY = p2.y - 40 - (nameLines.length - 1) * 20 + (b.label_dy || 0);
-      const label = el("text", { x: labelX, y: labelY, class: "rt-branch-label", fill: b.color, "text-anchor": "middle", tabindex: "0", role: "button" }, layers.labels);
+      const label = el(
+        "text",
+        { x: labelX, y: labelY, class: "rt-branch-label", fill: b.color, "text-anchor": "middle", tabindex: "0", role: "button" },
+        layers.labels
+      );
       nameLines.forEach((line, k) => {
         el("tspan", { x: labelX, dy: k ? 20 : 0 }, label).textContent = line;
         crownPoints.push(...textExtent(labelX, labelY + k * 20, line, "middle", 7.5));
@@ -197,7 +214,11 @@
         const x = q.x - ty * side * twig + tx * 10;
         const y = q.y + tx * side * twig + ty * 10;
         const gap = Math.max(13, r + 5);
-        el("path", { class: "rt-twig", stroke: b.color, d: `M${q.x},${q.y} Q${(q.x + x) / 2 + tx * 6},${(q.y + y) / 2 + ty * 6} ${x},${y}` }, layers.wood);
+        el(
+          "path",
+          { class: "rt-twig", stroke: b.color, d: `M${q.x},${q.y} Q${(q.x + x) / 2 + tx * 6},${(q.y + y) / 2 + ty * 6} ${x},${y}` },
+          layers.wood
+        );
         pos[p.id] = { x, y, ux: x - q.x, uy: y - q.y, labelAnchor: x < CX ? "end" : "start", labelDx: x < CX ? -gap : gap, labelDy: 4 };
         crownPoints.push({ x, y: y - r }, ...textExtent(x + pos[p.id].labelDx, y, p.label || p.title, pos[p.id].labelAnchor, 6.3));
       });
@@ -219,7 +240,19 @@
       pos[p.id] = { x, y, ux: x - c.x, uy: y - c.y, labelAnchor: "middle", labelDx: 0, labelDy: Math.max(26, markExtent(p) + 18) };
     });
     if (data.roots && m) {
-      const rl = el("text", { x: CX - 190, y: GROUND_Y + 32, class: "rt-branch-label rt-under", fill: data.roots.color, "text-anchor": "end", tabindex: "0", role: "button" }, layers.labels);
+      const rl = el(
+        "text",
+        {
+          x: CX - 190,
+          y: GROUND_Y + 32,
+          class: "rt-branch-label rt-under",
+          fill: data.roots.color,
+          "text-anchor": "end",
+          tabindex: "0",
+          role: "button",
+        },
+        layers.labels
+      );
       rl.textContent = data.roots.name;
       rl.addEventListener("click", () => showBranch("roots"));
       rl.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), showBranch("roots")));
@@ -380,7 +413,10 @@
     }
 
     function goalHtml() {
-      return `<div class="rt-kicker">The goal</div><div class="rt-title">${escapeHtml(data.goal.title)}</div>` + (data.goal.blurb ? `<p class="rt-blurb">${escapeHtml(data.goal.blurb)}</p>` : "");
+      return (
+        `<div class="rt-kicker">The goal</div><div class="rt-title">${escapeHtml(data.goal.title)}</div>` +
+        (data.goal.blurb ? `<p class="rt-blurb">${escapeHtml(data.goal.blurb)}</p>` : "")
+      );
     }
 
     function render(state) {
@@ -539,7 +575,11 @@
     const top = cy - r * 0.6;
     el("path", { class: "rt-stem", d: `M${cx},${top + 1} Q${cx},${top - r * 0.4} ${cx + r * 0.25},${top - r * 0.65}` }, parent);
     if (withLeaf) {
-      el("path", { class: "rt-mark-shape", d: leafPath(cx + r * 0.75, top - r * 0.55, 1, -0.35, r * 0.65, r * 0.6), fill: color, stroke: color }, parent);
+      el(
+        "path",
+        { class: "rt-mark-shape", d: leafPath(cx + r * 0.75, top - r * 0.55, 1, -0.35, r * 0.65, r * 0.6), fill: color, stroke: color },
+        parent
+      );
     }
     el(
       "path",

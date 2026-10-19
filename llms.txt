@@ -1,0 +1,63 @@
+---
+permalink: /llms.txt
+layout: none
+sitemap: false
+---
+{%- comment -%}
+  A plain-text summary of this site for LLMs and AI search agents (https://llmstxt.org).
+  Built from `person:` and the social settings in _config.yml and from _data/research_tree.yml,
+  so it stays in sync with the site.
+{%- endcomment -%}
+{%- capture name -%}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{%- endcapture -%}
+{%- capture root -%}{{ site.url }}{{ site.baseurl }}{%- endcapture -%}
+{%- assign person = site.person -%}
+{%- assign tree = site.data.research_tree -%}
+# {{ name }}
+
+> {{ site.description | strip_newlines | strip }}
+
+{{ name }} is a {{ person.job_title }} at {{ person.affiliation }}, advised by [{{ person.advisor }}]({{ person.advisor_url }}){% if person.awards %}, and a recipient of the {{ person.awards | join: ', ' }}{% endif %}. Before Johns Hopkins, {{ site.first_name }} received a B.S. from the {{ person.alumni_of | join: ', ' }}.
+
+Research interests: {{ person.knows_about | join: ', ' }}.
+
+## Research goal
+
+{{ tree.goal.title }}. {{ tree.goal.blurb | strip_newlines | strip }}
+
+## Research threads
+
+{% for branch in tree.branches -%}
+- **{{ branch.name }}**: {{ branch.blurb | strip_newlines | strip }}
+{% endfor -%}
+- **{{ tree.roots.name }}** (foundations): {{ tree.roots.blurb | strip_newlines | strip }}
+
+## Papers
+
+Papers marked (first author) are first- or co-first-authored by {{ site.first_name }}. The full list is on the [publications page]({{ root }}/publications/).
+
+{% assign papers = tree.papers | sort: 'year' | reverse -%}
+{% for paper in papers -%}
+{%- assign thread = tree.roots.name -%}
+{%- for branch in tree.branches -%}{%- if branch.id == paper.branch -%}{%- assign thread = branch.name -%}{%- endif -%}{%- endfor -%}
+- [{{ paper.title }}]({{ paper.url }}): {{ paper.venue }} {{ paper.year }}; thread: {{ thread }}{% if paper.first_author %} (first author){% endif %}
+{% endfor %}
+## Pages
+
+- [About]({{ root }}/): bio, news, and an interactive research tree
+- [Publications]({{ root }}/publications/): all papers with abstracts and BibTeX
+- [CV (PDF)]({{ root }}/assets/pdf/CV.pdf)
+- [Talks]({{ root }}/talks/)
+- [Repositories]({{ root }}/repositories/)
+
+## Profiles
+
+{% if site.scholar_userid %}- [Google Scholar](https://scholar.google.com/citations?user={{ site.scholar_userid }})
+{% endif %}{% if site.semanticscholar_id %}- [Semantic Scholar](https://www.semanticscholar.org/author/{{ site.semanticscholar_id }})
+{% endif %}{% if site.orcid_id %}- [ORCID](https://orcid.org/{{ site.orcid_id }})
+{% endif %}{% if site.github_username %}- [GitHub](https://github.com/{{ site.github_username }})
+{% endif %}{% if site.linkedin_username %}- [LinkedIn](https://www.linkedin.com/in/{{ site.linkedin_username }})
+{% endif %}{% if site.x_username %}- [X](https://x.com/{{ site.x_username }})
+{% endif %}
+## Contact
+
+- Email: {{ site.email }}

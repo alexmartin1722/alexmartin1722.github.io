@@ -1,0 +1,20 @@
+<!-- One person in a MARS group list; expects include.person (see _data/mars.yml) -->
+{% assign person = include.person %}
+{% assign name_link = person.website | default: person.scholar | default: person.linkedin | default: person.github %}
+<li class="mars-person">
+  <span class="mars-name">
+    {%- if name_link -%}
+      <a href="{{ name_link }}" target="_blank" rel="noopener">{{ person.name }}</a>
+    {%- else -%}
+      {{ person.name }}
+    {%- endif -%}
+  </span>
+  {% if person.role %}<span class="mars-role">{{ person.role }}</span>{% endif %}
+  {% if person.placement %}<span class="mars-role">Initial placement: {{ person.placement }}</span>{% endif %}
+  <span class="mars-links">
+    {% if person.website %}<a href="{{ person.website }}" target="_blank" rel="noopener" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
+    {% if person.linkedin %}<a href="{{ person.linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+    {% if person.scholar %}<a href="{{ person.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+    {% if person.github %}<a href="{{ person.github }}" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+  </span>
+</li>

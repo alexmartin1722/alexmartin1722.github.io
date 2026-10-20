@@ -60,7 +60,7 @@
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
-              {% if p.title == "CV" %}
+              {% if p.cv_pdf %}
                 <li class="nav-item">
                   <a 
                     class="nav-link" 

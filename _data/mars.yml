@@ -1,0 +1,71 @@
+# MARS group page (see _pages/mars.md).
+#
+# areas         -> "Research Areas"; `title` is a heading, `body` is a markdown paragraph
+# collaborators -> faculty / research scientists who co-mentor
+# students      -> current students
+# alumni        -> past students; `placement` is their first position after MARS
+#
+# Every person takes: name, role (optional), and any of `website`, `linkedin`,
+# `scholar`, `github` (full URLs). Missing links are simply not shown.
+
+areas:
+  - title: Efficient Multimodal Retrieval
+    body: >
+      How do we search over massive, multilingual video collections quickly without giving up
+      quality? We build late-interaction retrievers like [Video-ColBERT](https://arxiv.org/abs/2503.19009v1),
+      compress multi-vector indexes [in any modality](https://arxiv.org/abs/2602.21202), and fuse
+      evidence across modalities and languages with [MMMORRF](https://arxiv.org/abs/2503.20698). Since many
+      information needs are too complex for a single retrieval pass, we also build rerankers that reason
+      over video, audio, and text, such as [RankVideo](https://arxiv.org/abs/2602.02444).
+  - title: Reasoning & Calibration
+    body: >
+      Multimodal evidence is often partial, noisy, or contradictory. We study models that
+      [ground events](https://arxiv.org/abs/2410.05267) in videos and text, and that
+      perform [uncertain inference](https://arxiv.org/abs/2604.08701) across modalities with confidence
+      that reflects what the evidence actually supports.
+  - title: Collaborative Article Generation
+    body: >
+      We build agents that write and maintain grounded articles from many videos and documents, from
+      [WikiVideo](https://arxiv.org/abs/2504.00939) and video RAG pipelines like
+      [MARQUIS](https://aclanthology.org/2026.magmar-main.13/) to
+      [Knowledge Pull Requests](https://arxiv.org/abs/2609.26634) for keeping documents up to date with
+      people in the loop.
+  - title: Evaluation
+    body: >
+      Generated text needs evaluation that works no matter what modality it came from. We develop
+      metrics like [MiRAGE](https://arxiv.org/abs/2510.24870) for multimodal RAG and study
+      [what retrieval metrics actually tell us](https://arxiv.org/abs/2603.08819) about downstream generation.
+      We build benchmarks and shared tasks, including [MultiVENT 2.0](https://arxiv.org/abs/2410.11619),
+      [MultiVENT-Raw](https://arxiv.org/abs/2609.28437), [WikiVideo](https://arxiv.org/abs/2504.00939), and
+      [MAGMaR 2026](https://aclanthology.org/2026.magmar-main.16/), and we probe model capabilities and their
+      flaws, such as [attention sinks in VLMs](https://arxiv.org/abs/2610.15855).
+
+collaborators:
+  - name: Benjamin Van Durme
+    role: Professor, Johns Hopkins University
+    website: https://www.cs.jhu.edu/~vandurme/
+  - name: Xiang Xiang
+    role: Visiting Associate Professor, Johns Hopkins University
+    website: https://sites.google.com/view/xxiang
+  - name: Reno Kriz
+    role: Research Scientist, HLTCOE
+    website: https://hltcoe.jhu.edu/researcher/reno-kriz/
+  - name: Mahsa Yarmohammadi
+    role: Associate Research Scientist, CLSP
+    website: https://www.clsp.jhu.edu/faculty/mahsa-yarmohammadi/
+
+students:
+  - name: Katherine Guerrerio
+    role: B.S. 2027, Johns Hopkins University
+    scholar: https://scholar.google.com/citations?user=M6RsVygAAAAJ&hl=en
+
+alumni:
+  - name: Charles Weng
+    placement: Research Scientist, TikTok
+    linkedin: https://www.linkedin.com/in/charles-weng-a571b6235
+  - name: Dengjia Zhang
+    placement: Ph.D. Student, University of Pittsburgh
+    website: https://adoptedirelia.github.io/
+  - name: Hanxiang Qin
+    placement: Machine Learning Engineer, Kuaishou
+    website: https://hanxiangqin.github.io/

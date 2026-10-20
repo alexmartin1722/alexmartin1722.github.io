@@ -4,6 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 1
+cv_pdf: CV.pdf
 description: Curriculum vitae of Alexander Martin, Ph.D. student at Johns Hopkins University.
 ---
 

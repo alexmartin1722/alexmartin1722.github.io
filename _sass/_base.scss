@@ -220,6 +220,55 @@ ul.task-list input[type="checkbox"] {
   border-radius: 0.25rem;
 }
 
+// MARS group page
+.mars-logo {
+  float: right;
+  width: 240px;
+  margin: 0 0 1rem 1.5rem;
+
+  @media (max-width: 575px) {
+    float: none;
+    width: 60%;
+    margin: 0 auto 1rem;
+  }
+}
+
+.mars-people {
+  list-style: none;
+  padding-left: 0;
+
+  .mars-person {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.75rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .mars-name {
+    font-weight: 500;
+  }
+
+  .mars-role {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .mars-links {
+    margin-left: auto;
+
+    a {
+      margin-left: 0.5rem;
+      color: var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
 // professional / recent photo toggle on the about page
 .profile {
   .profile-photo[data-photo="recent"] {
